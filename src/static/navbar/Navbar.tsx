@@ -6,6 +6,7 @@ import './Navbar.css'
 function Navbar() {
   return (
     <>
+    <h1>Oi</h1>
     </>
 )
 }
