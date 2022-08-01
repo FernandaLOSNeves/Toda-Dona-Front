@@ -1,6 +1,6 @@
 .cursor{
     cursor: pointer;
-    color: white;
+    color: white !important;
 
 }
 
@@ -9,6 +9,6 @@
     text-decoration: none;
 }
 
-.background{
-    background-color: #a30f9e;
+.backnav{
+    background-color: #a30f9e !important;
 }

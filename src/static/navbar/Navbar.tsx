@@ -9,7 +9,7 @@ function Navbar() {
   return (
       <>
           <AppBar position="static" color='secondary'>
-              <Toolbar className="background" variant="dense">
+              <Toolbar className="backnav" variant="dense">
                   <Box className='cursor'>
                       <Typography variant="h5" color="inherit">
                           TODA DONA
@@ -17,17 +17,21 @@ function Navbar() {
                   </Box>
 
                   <Box display="flex" justifyContent="start">
+                  <Link to='/home' className='text-decorator-none'>
                       <Box mx={1} className='cursor'>
                           <Typography variant="h6" color="inherit">
                               Home
                           </Typography>
                       </Box>
+                      </Link>
+                      <Link to='/contato' className='text-decorator-none'>
                       <Box mx={1} className='cursor'>
                           <Typography variant="h6" color="inherit">
                               Contato
                           </Typography>
                       </Box>
-                      <Link to='/login' className='text-decorator-none'>
+                      </Link>
+                      <Link to='/home' className='text-decorator-none'>
                           <Box mx={1} className='cursor'>
                               <Typography variant="h6" color="inherit">
                                   Logout
