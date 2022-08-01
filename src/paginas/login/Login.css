@@ -1,0 +1,19 @@
+/* paleta de cores: 
+#a30f9e - Roxo
+#000000 - Preto
+#ff99ff - Rosa/Roxo-Claro
+#ffe2ff - Branco-Perolado
+#ffffff - Branco
+   
+*/
+
+
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.button-logar{
+    background-color:#a30f9e !important;
+} 
+
+
