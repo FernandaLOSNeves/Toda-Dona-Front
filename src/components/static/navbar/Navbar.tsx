@@ -11,9 +11,7 @@ function Navbar() {
           <AppBar position="static" color='secondary'>
               <Toolbar className="backnav" variant="dense">
                   <Box className='cursor'>
-                      <Typography variant="h5" color="inherit">
-                          TODA DONA
-                      </Typography>
+                      <img src="https://imagizer.imageshack.com/v2/779x464q90/r/924/SUD0SM.png" alt="" />
                   </Box>
 
                   <Box display="flex" justifyContent="start">
