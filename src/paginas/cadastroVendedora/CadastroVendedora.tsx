@@ -5,80 +5,111 @@ import { Link, useNavigate } from 'react-router-dom';
 import { cadastroVendedora } from '../../services/Service'
 import User from '../../models/Vendedora';
 import './CadastroVendedora.css';
+import Vendedora from '../../models/Vendedora';
 
 function CadastroVendedora() {
 
-    // let navigate = useNavigate();
-    // const [confirmarSenha,setConfirmarSenha] = useState<String>("")
-    // const [user, setUser] = useState<User>(
-    //     {
-    //         id: 0,
-    //         nome: '',
-    //         usuario: '',
-    //         senha: ''
-    //     })
+    let navigate = useNavigate();
+    const [confirmarSenha,setConfirmarSenha] = useState<String>("")
+    const [vendedora, setVendedora] = useState<Vendedora>(
+        {
+            id: 0,
+            nomeVendedora: '',
+            cpf: '',
+            foto_documento: '',
+            endereco: '',
+            telefone: '',
+            email: '',
+            senha: ''
+        })
 
-    // const [userResult, setUserResult] = useState<User>(
-    //     {
-    //         id: 0,
-    //         nome: '',
-    //         usuario: '',
-    //         senha: ''
-    //     })
+    const [vendedoraResult, setVendedoraResult] = useState<Vendedora>(
+        {
+            id: 0,
+            nomeVendedora: '',
+            cpf: '',
+            foto_documento: '',
+            endereco: '',
+            telefone: '',
+            email: '',
+            senha: ''
+        })
 
-    // useEffect(() => {
-    //     if (userResult.id !== 0) {
-    //         navigate("/login")
-    //     }
-    // }, [userResult])
+    useEffect(() => {
+        if (vendedoraResult.id !== 0) {
+            navigate("/login")
+        }
+    }, [vendedoraResult])
 
 
-    // function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>){
-    //     setConfirmarSenha(e.target.value)
-    // }
+    function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>){
+        setConfirmarSenha(e.target.value)
+    }
 
 
-    // function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
 
-    //     setUser({
-    //         ...user,
-    //         [e.target.name]: e.target.value
-    //     })
+        setVendedora ({
+            ...vendedora,
+            [e.target.name]: e.target.value
+        })
 
-    // }
-    // async function cadastrar(e: ChangeEvent<HTMLFormElement>) {
-    //     e.preventDefault()
+    }
+    async function cadastrar(e: ChangeEvent<HTMLFormElement>) {
+        e.preventDefault()
 
-    //     if (confirmarSenha === user.senha && user.senha.length >= 5) {
+        if (confirmarSenha === vendedora.senha && vendedora.senha.length >= 8) {
 
-    //         try {
-    //             await cadastroVendedora(`/usuarios/cadastrar`, user, setUserResult)
-    //             alert("Usuário cadastrado com sucesso")
+            try {
+                await cadastroVendedora(`/vendedora/cadastrar`, vendedora, setVendedoraResult)
+                alert("Usuário cadastrado com sucesso")
 
-    //         } catch (error) {
-    //             console.log(`Error: ${error}`)
+            } catch (error) {
+                console.log(`Error: ${error}`)
                 
-    //             alert("Usuário deve ser um e-mail!")
-    //         }
+                alert("Erro ao cadastrar usuário!")
+            }
 
-    //     } else {
-    //         alert("Confirmação de senha deve ser igual senha e deve conter 5 caracteres ou mais.")    // Mensagem que indica a quantidade minima de caracteres
+        } else {
+            alert("Confirmação de senha deve ser igual senha e deve conter 8 caracteres ou mais.")
 
-    //         setUser({ ...user, senha: "" })
-    //         setConfirmarSenha("")           
-    //     }
-    // }
+            setVendedora({ ...vendedora, senha: "" })
+            setConfirmarSenha("")           
+        }
+    }
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid item xs={6} className='imagem2'></Grid>
             <Grid item xs={6} alignItems='center'>
                 <Box paddingX={10}>
-                    <form /*onSubmit ={cadastrar}*/>
+                    <form onSubmit ={cadastrar}>
                         <Typography variant='h3' gutterBottom color='textPrimary' align='center' className="textos2"> Cadastrar</Typography>
-                        <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='Nome' variant='outlined' name='nome' margin='normal' fullWidth></TextField>
-                        <TextField  value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuario' variant='outlined' name='usuario' margin='normal' fullWidth></TextField>
-                        <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth></TextField>
-                        <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>)=> confirmarSenhaHandle(e)} id='confirmarSenha' label='confirmarSenha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth></TextField>
+
+
+                        <TextField  value={vendedora.nomeVendedora} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nomeVendedora' label='Nome' variant='outlined' name='nomeVendedora' margin='normal' fullWidth></TextField>
+
+
+                        <TextField  value={vendedora.cpf} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='cpf' label='CPF' variant='outlined' name='cpf' margin='normal' fullWidth></TextField>
+
+
+                        <TextField value={vendedora.foto_documento} onChange={(e: ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id='foto_documento' label='Link da foto do documento' variant='outlined' name='foto_documento' margin='normal' fullWidth></TextField>
+
+
+                        <TextField value={vendedora.endereco} onChange={(e: ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id='endereco' label='Endereço' variant='outlined' name='endereco' margin='normal' fullWidth></TextField>
+
+
+                        <TextField value={vendedora.telefone} onChange={(e: ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id='telefone' label='Telefone' variant='outlined' name='telefone' margin='normal' fullWidth></TextField>
+
+
+                        <TextField value={vendedora.email} onChange={(e: ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id='email' label='E-mail' variant='outlined' name='email' margin='normal' type='email' fullWidth></TextField>
+
+
+                        <TextField value={vendedora.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth></TextField>
+
+
+                        <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>)=> confirmarSenhaHandle(e)} id='confirmarSenha' label='Confirme a Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth></TextField>
+
+
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/login' className='text-decorator-none2'>
                                 <Button variant='contained' color='secondary' className='btnCancelar'>
