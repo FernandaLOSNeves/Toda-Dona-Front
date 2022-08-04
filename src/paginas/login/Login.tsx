@@ -1,28 +1,62 @@
-import React from 'react'
-import { Typography, Grid, TextField, Button  } from "@material-ui/core";
-import { Box} from "@mui/material";
-
+import React, { ChangeEvent, useState, useEffect } from "react";
+import { Grid, Typography, TextField, Button } from '@material-ui/core';
+import { Link, useNavigate } from 'react-router-dom';
+import { Box } from '@mui/material';
+import useLocalStorage from 'react-use-localstorage';
+import VendedoraLogin from '../../models/VendedoraLogin'
+import { login } from "../../services/Service";
 import './Login.css'
-import { Link } from "react-router-dom";
 
 function Login() {
+
+
+    let navigate = useNavigate();
+    const [token, setToken] = useLocalStorage('token');
+    const [vendedoraLogin, setVendedoraLogin] = useState<VendedoraLogin>({
+        id: 0,
+        cpf: '',
+        senha: '',
+        token: ''
+    })
+
+    useEffect(()=>{
+        if(token !== ''){
+            navigate('/home')
+        }
+    }, [token])
+
+    function updatedModel(e: ChangeEvent<HTMLInputElement>){
+        setVendedoraLogin({
+            ...vendedoraLogin,[e.target.name]:e.target.value
+        })
+    }
+
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>){
+        e.preventDefault();
+        console.log('VendedoraLogin: '+ Object.values(vendedoraLogin))
+        try{
+            await login (`/vendedora/logar`, vendedoraLogin, setToken)
+            alert('Login realizado com sucesso. Bem Vinda de Volta!');
+        }catch(error){
+            alert('Dados inválidos. Erro no login. Por favor, tente novamente.')
+        }
+    }
+
+
   return (
     <Grid container direction='row' justifyContent='center' alignItems='center'>
 
     {/* 1° tela do login  */}
     <Grid alignItems='center' xs={6}>
         <Box paddingX={20}>
-            <form>
+            <form onSubmit={onSubmit}>
                 <Typography variant='h3' color='textPrimary' component='h3' align='center' gutterBottom style={{fontWeight:'bold'}} > Entrar</Typography>
-                <TextField id='usuario' label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth /> 
-                <TextField id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth /> 
+                <TextField value={vendedoraLogin.cpf} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='cpf' label='CPF' variant='outlined' name='cpf' margin='normal' fullWidth /> 
+                <TextField value={vendedoraLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth /> 
 
                 {/* botão de login */}
                 <Box marginTop={2} textAlign='center' >
-                    <Link to='/home' className='text-decorator-none' >
                         <Button className='button-logar' type='submit' variant='contained' color='primary'> Logar </Button>  
-
-                    </Link>
                 </Box>
 
             </form>
@@ -31,7 +65,9 @@ function Login() {
                 <Box marginRight={1}>
                     <Typography variant="subtitle1" align="center" gutterBottom  >Não tem uma conta?</Typography>
                 </Box>
-                    <Typography variant="subtitle1" align="center" style={{fontWeight:"bold"}} gutterBottom > Cadastre-se</Typography>
+                    <Link to='/CadastroUsuario'><Typography variant="subtitle1" align="center" style={{fontWeight:"bold"}} gutterBottom > 
+                    Cadastre-se
+                    </Typography></Link>
             </Box>
 
         </Box>
