@@ -1,4 +1,4 @@
-interface Vendedora{
+interface Vendedora {
     id: number;
     nomeVendedora: string;
     cpf: string;
