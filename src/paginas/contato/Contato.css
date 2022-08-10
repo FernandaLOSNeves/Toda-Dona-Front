@@ -1,96 +1,105 @@
-.imgMulher{
+.imgMulher {
     margin-top: 30px;
-    background: linear-gradient(to bottom, rgba(163, 15, 158, 40%) 5%, rgba(255, 255, 255,0)),url(https://psiueducacao.com/wp-content/uploads/2019/05/mulheres-empreendedoras.jpg);
+    background: linear-gradient(to bottom, rgba(163, 15, 158, 40%) 5%, rgba(255, 255, 255, 0)), url(https://psiueducacao.com/wp-content/uploads/2019/05/mulheres-empreendedoras.jpg);
     background-size: cover;
-    width: 300px!important;
+    width: 300px !important;
     background-position: center;
     border-radius: 30px;
     padding: 3%;
 }
 
-.padding{
+.padding {
     padding: 3%;
-    background: linear-gradient(to bottom, rgba(163, 15, 158, 70%), rgba(163, 15, 158, 70%)),url(https://psiueducacao.com/wp-content/uploads/2019/05/mulheres-empreendedoras.jpg);
+    background: linear-gradient(to bottom, rgba(163, 15, 158, 70%), rgba(163, 15, 158, 70%)), url(https://psiueducacao.com/wp-content/uploads/2019/05/mulheres-empreendedoras.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
 }
 
-.textoConta{
+.textoConta {
     text-align: center;
-    height: 450px!important;
+    height: 450px !important;
 }
 
-.branco{
+.branco {
     color: white;
 }
 
-.centro{
+.centro {
     text-align: center;
 }
 
-.quebra{
+.quebra {
     margin-top: 30px;
     padding: 120px;
-    background:#a30f9e;
+    background: #a30f9e;
     background-size: 10%;
-    font-size: 50px!important;
+    font-size: 50px !important;
     text-align: center;
     color: white;
 }
 
-h3.grand{
+h3.grand {
     font-size: 40px;
 }
 
-h3{
+h3 {
     margin: 0px;
     font-size: 25px;
     font-family: 'Magilio', sans-serif;
 }
 
-h2{
+h2 {
     font-size: 50px;
-    font-family: 'Magilio', sans-serif; 
+    font-family: 'Magilio', sans-serif;
 }
 
-.quem{
+.quem {
     font-size: 80px;
     color: white;
     font-family: 'Magilio', sans-serif;
 }
 
-.display{
+.display {
     display: inline;
 }
 
-.redir{
+.redir {
     margin: 6px;
     text-align: center;
 }
 
-.redir2{
+.redir2 {
     margin: 6px;
-    margin-bottom: 30px!important;
+    margin-bottom: 30px !important;
     text-align: center;
 }
 
-.contain{
+.contain {
     justify-content: center;
     text-align: center;
     margin: 30px;
 }
 
-.valores{
+.valores {
     margin: 1px;
 }
 
-.cru{
-    text-decoration: underline;
+.cru {
+    text-decoration: none ;
+    box-shadow: inset 0 0 0 0 #a30f9e;
     color: black;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
-.card{
+.cru:hover {
+    box-shadow: inset 1000px 0 0 0 #a30f9e;
+    color: white;
+}
+
+.card {
     width: 200px;
     height: 60vh;
     display: flex;
@@ -100,11 +109,11 @@ h2{
     background: #ff99ff;
     outline-style: solid;
     border-radius: 20px;
-    margin: 30px!important;
+    margin: 30px !important;
     padding: 20px;
 }
 
-.card2{
+.card2 {
     width: 200px;
     height: 54vh;
     display: flex;
@@ -114,15 +123,15 @@ h2{
     background: #ff99ff;
     outline-style: solid;
     border-radius: 20px;
-    margin: 30px!important;
+    margin: 30px !important;
     padding: 20px;
 }
 
-.cardT{
+.cardT {
     color: white;
 }
 
-.cardInnerMargin{
+.cardInnerMargin {
     margin-top: 0px;
     margin-bottom: 0px;
 }
