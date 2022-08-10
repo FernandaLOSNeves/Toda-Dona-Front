@@ -5,7 +5,7 @@ interface Produto{
   nome_produto: string;
   valor_produto: number;
   descricao_produto: string;
-  categoria?: Categoria|null;
+  categorias?: Categoria|null;
 }
 
 export default Produto;

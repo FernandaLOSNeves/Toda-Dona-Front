@@ -36,6 +36,15 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link>
+
+                        <Link to='/formularioProdutos' className='text-decorator-none'>
+                            <Box mx={1} className='corNav'>
+                                <Typography variant="h6" color="inherit">
+                                    Cadastrar Produto
+                                </Typography>
+                            </Box>
+                        </Link>
+
                         <Link to='/contato' className='text-decorator-none'>
                             <Box mx={1} className='corNav'>
                                 <Typography variant="h6" color="inherit">
@@ -45,14 +54,10 @@ function Navbar() {
                         </Link>
                     </Box>
 
-                    <Box>
-                        <Link to='/login' className='container'>
-                            <Box mx={1} className='container'>
-                                <Typography variant="h6" color="inherit">
-                                    Sair
-                                </Typography>
-                            </Box>
-                        </Link>
+                    <Box mx={1} className='container' onClick={goLogout}>
+                        <Typography variant="h6" color="inherit" >
+                            Sair
+                        </Typography>
                     </Box>
                 </Toolbar>
             </AppBar>

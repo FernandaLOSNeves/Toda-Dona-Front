@@ -2,6 +2,7 @@ import React from 'react'
 import { Typography, Grid, Button } from '@material-ui/core'
 import { Box } from '@mui/material'
 import './Home.css'
+import { Link } from 'react-router-dom'
 
 function Home() {
   return (
@@ -37,12 +38,16 @@ function Home() {
           </Box>
           <Box display="flex" justifyContent="center">
             <Box marginRight={1}></Box>
-            <Button className="button" variant="outlined">
-              Meus produtos
-            </Button>
-            <Button className="button" variant="outlined">
-              Novo produto
-            </Button>
+            <Link to='/produtos' className="text-decorator-none">
+              <Button className="button" variant="outlined">
+                Meus produtos
+              </Button>
+            </Link>
+            <Link to='/formularioProdutos' className="text-decorator-none">
+              <Button className="button" variant="outlined">
+                Novo produto
+              </Button>
+            </Link>
           </Box>
         </Grid>
         <Grid item xs={6}>

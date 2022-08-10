@@ -10,6 +10,8 @@ import CadastroVendedora from './paginas/cadastroVendedora/CadastroVendedora'
 import CadastrarCategoria from './components/categoria/cadastrarCategoria/CadastrarCategoria'
 import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria'
 import ListaCategoria from './components/categoria/listaCategoria/ListaCategoria'
+import ListaProdutos from './components/produtos/listaprodutos/ListaProdutos'
+import CadastroProduto from './components/produtos/cadastroProduto/CadastroProduto'
 
 function App() {
   return (
@@ -23,13 +25,11 @@ function App() {
           <Route path="/contato" element={<Contato />} />
           <Route path="/cadastro" element={<CadastroVendedora />} />
           <Route path="/categorias" element={<ListaCategoria />} />
-          {/* <Route path="/posts" element={<ListaPostagem />} /> */}
-          {/* <Route path="/formularioPostagem" element={<CadastroPost />} /> */}
+          <Route path="/produtos" element={<ListaProdutos />} />
+          <Route path="/formularioProdutos" element={<CadastroProduto />} />
           <Route path="/cadastrarCategoria" element={<CadastrarCategoria />} />
-          <Route
-            path="/cadastrarCategoria/:id"
-            element={<CadastrarCategoria />}
-          />
+          <Route path="/cadastrarCategoria/:id" element={<CadastrarCategoria />} />
+          
           {/* <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />  */}
           <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
         </Routes>
