@@ -7,6 +7,7 @@ import Login from './paginas/login/Login';
 import Contato from './paginas/contato/Contato';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import CadastroVendedora from './paginas/cadastroVendedora/CadastroVendedora';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/contato" element={<Contato />} />
-        {/* <Route path="/cadastro" element={<CadastroUsuario />} /> */}
+        <Route path="/cadastro" element={<CadastroVendedora />} />
       </Routes>
     </div>
     <Footer />
