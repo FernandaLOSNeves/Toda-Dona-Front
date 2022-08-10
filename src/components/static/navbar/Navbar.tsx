@@ -17,47 +17,47 @@ function Navbar() {
         <>
             <AppBar position="static" color='secondary'>
                 <Toolbar className="backnav" variant="dense">
-                    <Box className='tdLogo'>
+                <Box className='tdLogo'>
                         <img className='tamImg' src="https://imageshack.com/i/poSUD0SMp" alt="TodaDona Logo" />
                     </Box>
+                    <Box className='espaco'>
+                        <Box display="flex" justifyContent="start" className='corNav'>
+                            <Link to='/home' className='text-decorator-none'>
+                                <Box mx={1} className='corNav'>
+                                    <Typography variant="h6" color="inherit">
+                                        • Home
+                                    </Typography>
+                                </Box>
+                            </Link>
+                            <Link to='/cadastrarCategoria' className='text-decorator-none'>
+                                <Box mx={1} className='corNav'>
+                                    <Typography variant="h6" color="inherit">
+                                        • Cadastrar Categoria
+                                    </Typography>
+                                </Box>
+                            </Link>
 
-                    <Box display="flex" justifyContent="start" className='corNav'>
-                        <Link to='/home' className='text-decorator-none'>
-                            <Box mx={1} className='corNav'>
-                                <Typography variant="h6" color="inherit">
-                                    Home
-                                </Typography>
-                            </Box>
-                        </Link>
-                        <Link to='/cadastrarCategoria' className='text-decorator-none'>
-                            <Box mx={1} className='corNav'>
-                                <Typography variant="h6" color="inherit">
-                                    Cadastrar Categoria
-                                </Typography>
-                            </Box>
-                        </Link>
+                            <Link to='/formularioProdutos' className='text-decorator-none'>
+                                <Box mx={1} className='corNav'>
+                                    <Typography variant="h6" color="inherit">
+                                        • Cadastrar Produto
+                                    </Typography>
+                                </Box>
+                            </Link>
 
-                        <Link to='/formularioProdutos' className='text-decorator-none'>
-                            <Box mx={1} className='corNav'>
-                                <Typography variant="h6" color="inherit">
-                                    Cadastrar Produto
-                                </Typography>
-                            </Box>
-                        </Link>
-
-                        <Link to='/contato' className='text-decorator-none'>
-                            <Box mx={1} className='corNav'>
-                                <Typography variant="h6" color="inherit">
-                                    Contato
-                                </Typography>
-                            </Box>
-                        </Link>
-                    </Box>
-
-                    <Box mx={1} className='container' onClick={goLogout}>
-                        <Typography variant="h6" color="inherit" >
-                            Sair
-                        </Typography>
+                            <Link to='/contato' className='text-decorator-none'>
+                                <Box mx={1} className='corNav'>
+                                    <Typography variant="h6" color="inherit">
+                                        • Contato
+                                    </Typography>
+                                </Box>
+                            </Link>
+                        </Box>
+                        <Box mx={1} className='container' onClick={goLogout}>
+                            <Typography variant="h6" color="inherit" >
+                                • Sair
+                            </Typography>
+                        </Box>
                     </Box>
                 </Toolbar>
             </AppBar>

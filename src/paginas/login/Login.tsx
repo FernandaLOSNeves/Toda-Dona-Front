@@ -66,6 +66,7 @@ function Login() {
               name="cpf"
               margin="normal"
               fullWidth
+              className='fundoTexto'
             />
             <TextField
               value={vendedoraLogin.senha}
@@ -77,6 +78,7 @@ function Login() {
               margin="normal"
               type="password"
               fullWidth
+              className='fundoTexto'
             />
 
             {/* botão de login */}

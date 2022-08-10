@@ -79,9 +79,8 @@ function CadastroVendedora() {
     }
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
-            <Grid item xs={6} className='imagem2'></Grid>
             <Grid item xs={6} alignItems='center'>
-                <Box paddingX={10}>
+                <Box paddingX={10} paddingY={10}>
                     <form onSubmit ={cadastrar}>
                         <Typography variant='h3' gutterBottom color='textPrimary' align='center' className="textos2"> Cadastrar</Typography>
 
@@ -109,16 +108,18 @@ function CadastroVendedora() {
 
                         <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>)=> confirmarSenhaHandle(e)} id='confirmarSenha' label='Confirme a Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth></TextField>
 
+                        
 
                         <Box marginTop={2} textAlign='center'>
+                        <Button type= 'submit' variant='contained' className='btnCad'>
+                                    Cadastrar
+                                </Button>
                             <Link to='/login' className='text-decorator-none2'>
-                                <Button variant='contained' color='secondary' className='btnCancelar'>
+                                <Button variant='contained' className='btnCancelar'>
                                     Cancelar
                                 </Button>
                             </Link>
-                            <Button type= 'submit' variant='contained' color='primary'>
-                                    Cadastrar
-                                </Button>
+                            
                         </Box>
                     </form>
                 </Box>

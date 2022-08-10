@@ -11,8 +11,16 @@
     font-weight: bold !important;
 }
 
+.btnCad{
+    background-color: #a30f9e!important;
+    margin-right: 10px!important;
+    color: white!important;
+}
+
 .btnCancelar{
+    background-color: red!important;
     margin-right: 20px !important;
+    color: white!important;
 }
 
 .text-decorator-none2{

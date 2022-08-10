@@ -6,8 +6,13 @@
 #ffffff - Branco
    
 */
+
+.fundoTexto{
+    background-color: white;
+}
+
 .entrar{
-    color: white!important;
+    color: black!important;
     font-weight: 100!important;
 }
 
@@ -32,6 +37,8 @@ body{
     display: flex;
     justify-content: center;
     padding: 5%;
+    background-color: #ff99ff;
+    background-image: linear-gradient(to top,#a30f9e, #ff99ff);
 }
 
 .card{
@@ -41,8 +48,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgb(163,15,158);
-    background: linear-gradient(180deg, rgba(163,15,158,90%) 40%, rgba(255,153,255,0%) 80%);    
+    background: white;
+   
     border-radius: 20px;
     stroke: #a30f9e;
 }

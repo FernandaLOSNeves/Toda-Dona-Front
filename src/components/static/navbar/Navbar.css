@@ -12,11 +12,20 @@
     background-color: #ffffff !important;
 }
 
-.corNav{
-    color: #a30f9e!important;
-    margin-right: 450px;
-    align-items: center;
+h6{
     font-family: 'Magilio', sans-serif!important; 
+}
+
+.corNav {
+    color: #a30f9e!important;
+    align-items: center;
+    padding: 10px;
+}
+
+.margem{
+    color: #a30f9e!important;
+    align-items: center;
+    margin-right: 450px;
 }
 
 .tamImg{
@@ -27,10 +36,13 @@
     justify-content: flex-end!important;
     color: #a30f9e;
     text-decoration: none;
-    font-family: 'Magilio', sans-serif!important;                                        
+    font-family: 'Magilio', sans-serif!important;                                      
 }
 
 .tdLogo{
     justify-content: flex-start;
-    margin-right: 420px;
+}
+.espaco{
+    display: flex;
+    justify-content: end;
 }

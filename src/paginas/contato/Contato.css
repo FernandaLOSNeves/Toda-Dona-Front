@@ -1,0 +1,123 @@
+.imgMulher{
+    margin-top: 30px;
+    background: linear-gradient(to bottom, rgba(163, 15, 158, 40%) 5%, rgba(255, 255, 255,0)),url(https://psiueducacao.com/wp-content/uploads/2019/05/mulheres-empreendedoras.jpg);
+    background-size: cover;
+    width: 300px!important;
+    background-position: center;
+    border-radius: 30px;
+    padding: 3%;
+}
+
+.padding{
+    padding: 3%;
+    background: linear-gradient(to bottom, rgba(163, 15, 158, 70%), rgba(163, 15, 158, 70%)),url(https://psiueducacao.com/wp-content/uploads/2019/05/mulheres-empreendedoras.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.textoConta{
+    text-align: center;
+    height: 450px!important;
+}
+
+.branco{
+    color: white;
+}
+
+.centro{
+    text-align: center;
+}
+
+.quebra{
+    margin-top: 30px;
+    padding: 120px;
+    background:#a30f9e;
+    background-size: 10%;
+    font-size: 50px!important;
+    text-align: center;
+    color: white;
+}
+
+h3.grand{
+    font-size: 40px;
+}
+
+h3{
+    margin: 0px;
+    font-size: 25px;
+    font-family: 'Magilio', sans-serif;
+}
+
+h2{
+    font-size: 50px;
+    font-family: 'Magilio', sans-serif; 
+}
+
+.quem{
+    font-size: 80px;
+    color: white;
+    font-family: 'Magilio', sans-serif;
+}
+
+.display{
+    display: inline;
+}
+
+.redir{
+    margin: 6px;
+    text-align: center;
+}
+
+.redir2{
+    margin: 6px;
+    margin-bottom: 30px!important;
+    text-align: center;
+}
+
+.contain{
+    justify-content: center;
+    text-align: center;
+    margin: 30px;
+}
+
+.valores{
+    margin: 1px;
+}
+
+.card{
+    width: 200px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ff99ff;
+    outline-style: solid;
+    border-radius: 20px;
+    margin: 30px!important;
+    padding: 20px;
+}
+
+.card2{
+    width: 200px;
+    height: 54vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ff99ff;
+    outline-style: solid;
+    border-radius: 20px;
+    margin: 30px!important;
+    padding: 20px;
+}
+
+.cardT{
+    color: white;
+}
+
+.cardInnerMargin{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
