@@ -42,18 +42,17 @@ function Login() {
   }
 
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="center">
+    <Grid container direction="row" justifyContent="center" alignItems="center" className='Login'>
       {/* 1° tela do login  */}
-      <Grid alignItems="center" xs={6}>
-        <Box paddingX={20}>
+      <Grid alignItems="center" xs={8} className='card'>
+        <Box paddingX={20} paddingY={20}>
           <form onSubmit={onSubmit}>
             <Typography
               variant="h3"
-              color="textPrimary"
               component="h3"
               align="center"
               gutterBottom
-              style={{ fontWeight: 'bold' }}
+              className='entrar'
             >
               {' '}
               Entrar
@@ -113,19 +112,6 @@ function Login() {
           </Box>
         </Box>
       </Grid>
-
-      {/* parte direita a tela do login */}
-      <Grid
-        xs={6}
-        style={{
-          backgroundImage: `url(https://imagizer.imageshack.com/v2/779x464q90/r/924/SUD0SM.png)`,
-          backgroundRepeat: 'no-repeat',
-          width: '70vh',
-          minHeight: '70vh',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-      ></Grid>
     </Grid>
   )
 }

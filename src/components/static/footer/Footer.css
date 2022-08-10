@@ -1,6 +1,6 @@
 .box1{
     background-color: #a30f9e;
-    height: 120px;
+    height: 40px;
 }
 
 .box2{
@@ -9,10 +9,17 @@
 }
 
 .redes{
-    font-size: 60px !important;
+    font-size: 30px !important;
     color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .textos{
+   color: white;
+   text-decoration: none;
+}
+
+.textos2{
    color: white;
 }

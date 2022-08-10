@@ -4,11 +4,33 @@
 
 }
 
-
 .text-decorator-none{
     text-decoration: none;
 }
 
 .backnav{
-    background-color: #a30f9e !important;
+    background-color: #ffffff !important;
+}
+
+.corNav{
+    color: #a30f9e!important;
+    margin-right: 450px;
+    align-items: center;
+    font-family: 'Magilio', sans-serif!important; 
+}
+
+.tamImg{
+    width: 120px;
+}
+
+.container{
+    justify-content: flex-end!important;
+    color: #a30f9e;
+    text-decoration: none;
+    font-family: 'Magilio', sans-serif!important;                                        
+}
+
+.tdLogo{
+    justify-content: flex-start;
+    margin-right: 420px;
 }

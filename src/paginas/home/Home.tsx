@@ -22,7 +22,7 @@ function Home() {
               component="h3"
               align="center"
             >
-              Seja bem vindo(a)!
+              Seja bem vinda!
             </Typography>
             <Typography
               className="fonte"
