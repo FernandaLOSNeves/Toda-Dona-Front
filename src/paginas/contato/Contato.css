@@ -85,6 +85,11 @@ h2{
     margin: 1px;
 }
 
+.cru{
+    text-decoration: underline;
+    color: black;
+}
+
 .card{
     width: 200px;
     height: 60vh;
