@@ -1,7 +1,5 @@
 .cursor{
     cursor: pointer;
-    color: white !important;
-
 }
 
 .text-decorator-none{
@@ -42,6 +40,7 @@ h6{
 .tdLogo{
     justify-content: flex-start;
 }
+
 .espaco{
     display: flex;
     justify-content: flex-end;
