@@ -16,6 +16,7 @@ function CadastrarCategoria() {
 
   useEffect(() => {
     if (token === '') {
+      
       alert('Você precisa estar logada')
       navigate('/login')
     }

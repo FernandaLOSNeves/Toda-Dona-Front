@@ -14,7 +14,7 @@ function CadastroProduto() {
     const [token, setToken] = useLocalStorage("token");
 
     useEffect(() => {
-        if (token === "") {
+        if (token == "") {
             alert("Você precisa estar logada");
             navigate("/login");
         }
@@ -47,7 +47,7 @@ function CadastroProduto() {
     }, [id]);
 
     async function getCategorias() {
-        await busca("/categorias", setCategorias, {
+        await busca("/categoria", setCategorias, {
             headers: {
                 Authorization: token,
             },
@@ -55,7 +55,7 @@ function CadastroProduto() {
     }
 
     async function findByIdProduto(id: string) {
-        await buscaId(`/produto/${id}`, setProduto, {
+        await buscaId(`produto/${id}`, setProduto, {
             headers: {
                 Authorization: token,
             },
@@ -79,7 +79,7 @@ function CadastroProduto() {
                     Authorization: token,
                 },
             });
-            alert("Produto atualizado com sucesso");
+            alert("Produto atualizada com sucesso");
         } else {
             console.log(produto)
             post(`/produto`, produto, setProduto, {
@@ -140,15 +140,15 @@ function CadastroProduto() {
                     fullWidth
                 />
 
-                    <FormControl>
-                    <InputLabel id="demo-simple-select-helper-label"> Categoria </InputLabel>
+                <FormControl>
+                    <InputLabel id="demo-simple-select-helper-label">Categoria </InputLabel>
                     <Select
                         labelId="demo-simple-select-helper-label"
                         id="demo-simple-select-helper"
                         onChange={(e) =>
                             buscaId(`/categoria/${e.target.value}`, setCategoria, {
                                 headers: {
-                                    'Authorization': token,
+                                    Authorization: token,
                                 },
                             })
                         }
