@@ -17,7 +17,7 @@ function Navbar() {
         <>
             <AppBar position="static" color='secondary'>
                 <Toolbar className="backnav" variant="dense">
-                <Box className='tdLogo'>
+                    <Box className='tdLogo'>
                         <img className='tamImg' src="https://imageshack.com/i/poSUD0SMp" alt="TodaDona Logo" />
                     </Box>
                     <Box className='espaco'>
@@ -29,6 +29,21 @@ function Navbar() {
                                     </Typography>
                                 </Box>
                             </Link>
+
+                            <Link to='/categorias' className='text-decorator-none'>
+                                <Box mx={1} className='corNav'>
+                                    <Typography variant="h6" color="inherit">
+                                        • Categorias
+                                    </Typography>
+                                </Box>
+                            </Link>
+                            <Link to='/produtos' className='text-decorator-none'>
+                                <Box mx={1} className='corNav'>
+                                    <Typography variant="h6" color="inherit">
+                                        • Produtos
+                                    </Typography>
+                                </Box>
+                            </Link>
                             <Link to='/cadastrarCategoria' className='text-decorator-none'>
                                 <Box mx={1} className='corNav'>
                                     <Typography variant="h6" color="inherit">
@@ -37,7 +52,7 @@ function Navbar() {
                                 </Box>
                             </Link>
 
-                            <Link to='/formularioProdutos' className='text-decorator-none'>
+                            <Link to='/formularioProduto' className='text-decorator-none'>
                                 <Box mx={1} className='corNav'>
                                     <Typography variant="h6" color="inherit">
                                         • Cadastrar Produto
@@ -52,13 +67,14 @@ function Navbar() {
                                     </Typography>
                                 </Box>
                             </Link>
-                        </Box>
-                        <Box mx={1} className='container' onClick={goLogout}>
-                            <Typography variant="h6" color="inherit" >
-                                • Sair
-                            </Typography>
+                            <Box mx={1} className='container' onClick={goLogout}>
+                                <Typography variant="h6" color="inherit" className='cursor'>
+                                    • Sair
+                                </Typography>
+                            </Box>
                         </Box>
                     </Box>
+
                 </Toolbar>
             </AppBar>
         </>

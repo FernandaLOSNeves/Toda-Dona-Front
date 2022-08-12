@@ -79,7 +79,7 @@ function CadastroProduto() {
                     Authorization: token,
                 },
             });
-            alert("Produto atualizada com sucesso");
+            alert("Produto atualizado com sucesso");
         } else {
             console.log(produto)
             post(`/produto`, produto, setProduto, {
