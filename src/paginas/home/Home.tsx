@@ -43,7 +43,7 @@ function Home() {
                 Meus produtos
               </Button>
             </Link>
-            <Link to='/formularioProdutos' className="text-decorator-none">
+            <Link to='/formularioProduto' className="text-decorator-none">
               <Button className="button" variant="outlined">
                 Novo produto
               </Button>
