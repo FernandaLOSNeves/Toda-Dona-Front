@@ -8,21 +8,35 @@ import {
   Button,
   Typography
 } from '@material-ui/core'
-import useLocalStorage from 'react-use-localstorage'
 import { busca } from '../../../services/Service'
 import Categoria from '../../../models/Categoria'
+import { toast } from 'react-toastify'
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function ListaCategoria() {
   const [categorias, setCategorias] = useState<Categoria[]>([])
-  const [token, setToken] = useLocalStorage('token')
-  let history = useNavigate()
+  let navigate = useNavigate()
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
+
 
   useEffect(() => {
-    if (token == '') {
-      alert('Você precisa estar logada')
-      history('/login')
+    if (token == "") {
+        toast.error("Você precisa estar logada", {
+            position: "top-right",
+            autoClose: 3500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'light'
+        });
+        navigate("/login");
     }
-  }, [token])
+}, [token]);
 
   async function getCategoria() {
     await busca('/categoria', setCategorias, {

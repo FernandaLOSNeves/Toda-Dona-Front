@@ -10,7 +10,7 @@ function Contato() {
       <Grid container className='padding'>
         <Grid item xs={12} className='textoConta'>
           <h1 className='quem'>Quem somos nós?</h1>
-          <h2 className='branco'>Nós somos todas as mulheres com vontade de empreender em um só lugar.<br />Um espaço só para elas.</h2>
+          <h2 className='branco2'>Nós somos todas as mulheres com vontade de empreender em um só lugar.<br />Um espaço só para elas.</h2>
         </Grid>
       </Grid>
 

@@ -6,14 +6,20 @@
 #ffffff - Branco
    
 */
+.branco{
+    color: white;
+    text-decoration: none;
+    font-size: 20px!important;
+}
 
 .fundoTexto{
     background-color: white;
 }
 
 .entrar{
-    color: black!important;
-    font-weight: 100!important;
+    color: white!important;
+    font-weight: 400!important;
+    font-family: 'Magilio', sans-serif!important;
 }
 
 .text-decorator-none{
@@ -21,7 +27,8 @@
 }
 
 .button-logar{
-    background-color:#a30f9e !important;
+    background-color:#ff99ff  !important;
+    color: #a30f9e!important;
 }
 
 .fonte{
@@ -37,8 +44,8 @@ body{
     display: flex;
     justify-content: center;
     padding: 5%;
-    background-color: #ff99ff;
-    background-image: linear-gradient(to top,#a30f9e, #ff99ff);
+    background-color: white;
+    
 }
 
 .card{
@@ -48,8 +55,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: white;
-   
+    background-image: linear-gradient(to top,#a30f9e, #ff99ff)!important;
     border-radius: 20px;
     stroke: #a30f9e;
+    outline: none!important;
 }

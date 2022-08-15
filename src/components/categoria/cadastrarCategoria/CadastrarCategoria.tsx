@@ -2,13 +2,17 @@ import React, { useState, useEffect, ChangeEvent } from 'react'
 import { Container, Typography, TextField, Button } from '@mui/material'
 import { buscaId, post, put } from '../../../services/Service'
 import { useNavigate, useParams } from 'react-router-dom'
-import useLocalStorage from 'react-use-localstorage'
 import Categoria from '../../../models/Categoria'
+import { Bounce, toast } from 'react-toastify'
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function CadastrarCategoria() {
   let navigate = useNavigate()
   const { id } = useParams<{ id: string }>()
-  const [token, setToken] = useLocalStorage('token')
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
   const [categoria, setCategoria] = useState<Categoria>({
     id: 0,
     categoria: ''
@@ -16,7 +20,15 @@ function CadastrarCategoria() {
 
   useEffect(() => {
     if (token == '') {
-      alert('Você precisa estar logada')
+      toast.error("Você precisa estar logada", {
+        position: "top-right",
+        autoClose: 3500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
       navigate('/login')
     }
   }, [token])
@@ -60,7 +72,15 @@ function CadastrarCategoria() {
           Authorization: token
         }
       })
-      alert('Categoria cadastrada com sucesso')
+      toast.success('Categoria cadastrada com sucesso', {
+        position: "top-right",
+        autoClose: 3500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
     }
     back()
   }

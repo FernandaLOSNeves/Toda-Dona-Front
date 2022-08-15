@@ -6,16 +6,30 @@ import useLocalStorage from "react-use-localstorage";
 import { busca, buscaId, post, put } from "../../../services/Service";
 import Categoria from "../../../models/Categoria";
 import Produto from "../../../models/Produto";
+import { toast } from "react-toastify";
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function CadastroProduto() {
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
     const [categorias, setCategorias] = useState<Categoria[]>([]);
-    const [token, setToken] = useLocalStorage("token");
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logada");
+            toast.error("Você precisa estar logada", {
+                position: "top-right",
+                autoClose: 3500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'light'
+            });
             navigate("/login");
         }
     }, [token]);
@@ -79,7 +93,15 @@ function CadastroProduto() {
                     Authorization: token,
                 },
             });
-            alert("Produto atualizado com sucesso");
+            toast.success("Produto atualizado com sucesso", {
+                position: "top-right",
+                autoClose: 3500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+              });
         } else {
             console.log(produto)
             post(`/produto`, produto, setProduto, {
@@ -87,7 +109,15 @@ function CadastroProduto() {
                     Authorization: token,
                 },
             });
-            alert("Produto cadastrada com sucesso");
+            toast.success("Produto cadastrada com sucesso", {
+                position: "top-right",
+                autoClose: 3500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+              });
         }
         back();
     }

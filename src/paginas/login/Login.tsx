@@ -5,11 +5,15 @@ import { Box } from '@mui/material'
 import useLocalStorage from 'react-use-localstorage'
 import VendedoraLogin from '../../models/VendedoraLogin'
 import { login } from '../../services/Service'
+import { useDispatch } from 'react-redux';
+import { addToken } from "../../store/tokens/actions";
 import './Login.css'
+import { toast } from 'react-toastify'
 
 function Login() {
   let navigate = useNavigate()
-  const [token, setToken] = useLocalStorage('token')
+  const dispatch = useDispatch();
+  const [token, setToken] = useState('');
   const [vendedoraLogin, setVendedoraLogin] = useState<VendedoraLogin>({
     id: 0,
     cpf: '',
@@ -19,6 +23,7 @@ function Login() {
 
   useEffect(() => {
     if (token !== '') {
+      dispatch(addToken(token));
       navigate('/home')
     }
   }, [token])
@@ -35,9 +40,25 @@ function Login() {
     console.log('VendedoraLogin: ' + Object.values(vendedoraLogin))
     try {
       await login(`/vendedora/logar`, vendedoraLogin, setToken)
-      alert('Login realizado com sucesso. Bem Vinda de Volta!')
+      toast.success('Login realizado com sucesso. Bem Vinda de Volta!', {
+        position: "top-right",
+        autoClose: 3500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
     } catch (error) {
-      alert('Dados inválidos. Erro no login. Por favor, tente novamente.')
+      toast.error('Dados inválidos. Erro no login. Por favor, tente novamente.', {
+        position: "top-right",
+        autoClose: 3500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
     }
   }
 
@@ -97,7 +118,7 @@ function Login() {
 
           <Box display="flex" justifyContent="center" marginTop={2}>
             <Box marginRight={1}>
-              <Typography variant="subtitle1" align="center" gutterBottom>
+              <Typography variant="subtitle1" align="center" gutterBottom className='branco'>
                 Não tem uma conta?
               </Typography>
             </Box>
@@ -105,7 +126,7 @@ function Login() {
               <Typography
                 variant="subtitle1"
                 align="center"
-                style={{ fontWeight: 'bold' }}
+                className='branco'
                 gutterBottom
               >
                 Cadastre-se
