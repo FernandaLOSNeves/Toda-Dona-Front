@@ -5,6 +5,8 @@ import './Home.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
+import ModalProduto from '../../components/produtos/modalProdutos/ModalProduto'
+import TabProdutos from '../../components/produtos/tabprodutos/TabProdutos'
 
 function Home() {
 
@@ -54,7 +56,9 @@ function Home() {
             </Typography>
           </Box>
           <Box display="flex" justifyContent="center">
-            <Box marginRight={1}></Box>
+            <Box marginRight={1}>
+              <ModalProduto/>
+            </Box>
             <Link to='/produtos' className="text-decorator-none">
               <Button className="button" variant="outlined">
                 Meus produtos
@@ -75,7 +79,16 @@ function Home() {
             height="500px"
           />
         </Grid>
-        <Grid xs={12} className="postagens"></Grid>
+        <Grid xs={12} className="nav-home">
+         <Box>
+          <Typography>
+            Lista produtos
+          </Typography>
+         </Box>
+        </Grid>
+        <Grid xs={12}>
+         <TabProdutos/>
+        </Grid>
       </Grid>
     </>
   )

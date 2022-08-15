@@ -11,6 +11,8 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 
 
+
+
 function ListaProdutos() {
   const [produtos, setProdutos] = useState<Produto[]>([])
   let navigate = useNavigate();
@@ -63,6 +65,10 @@ function ListaProdutos() {
                 <Typography variant="body2" component="p">
                   {produto.descricao_produto}
                 </Typography>
+                <Box>
+                <img src={produto.fotoProduto} alt="foto produto" className="imagem-produto" />
+                </Box>
+      
                 <Typography variant="body2" component="p">
                   {produto.categorias?.categoria}
                 </Typography>

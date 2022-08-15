@@ -19,3 +19,11 @@
 .background {
   background-color: #ffe2ff !important;
 }
+
+.nav-home{
+background-color: #a30f9e;
+height: 50px;
+color: white;
+text-align: center;
+font-weight: bold;
+}
