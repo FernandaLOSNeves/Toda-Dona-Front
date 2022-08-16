@@ -21,7 +21,7 @@ function ListaProdutosHome() {
   );
 
   useEffect(() => {
-    if (token == "") {
+    if (token !== "") {
         toast.error("Você precisa estar logada", {
             position: "top-right",
             autoClose: 3500,

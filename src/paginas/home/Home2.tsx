@@ -87,9 +87,9 @@ function Home2() {
          
          </Box>
         </Grid>
-        {/* <Grid xs={12}>
+        <Grid xs={12}>
          <TabProdutos/>
-        </Grid> */}
+        </Grid>
         
       </Grid>
     </>

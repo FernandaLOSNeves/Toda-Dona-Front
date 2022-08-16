@@ -80,9 +80,7 @@ function Home() {
             height="500px"
           />
         </Grid>
-        <Grid xs={12} className="postagens">
-          <CarouselComponent/>
-        </Grid>
+       
         <Grid xs={12} className="nav-home">
          <Box>
          

@@ -114,7 +114,7 @@ function Navbar() {
                     </Link>
 
                     
-                    <Link to='/produtos' className='text-decorator-none'>
+                    <Link to='/produtoscliente' className='text-decorator-none'>
                         <Box mx={1} className='corNav'>
                             <Typography variant="h6" color="inherit">
                                 • Produtos
