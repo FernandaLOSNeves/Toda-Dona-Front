@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import ModalProduto from '../../components/produtos/modalProdutos/ModalProduto'
 import TabProdutos from '../../components/produtos/tabprodutos/TabProdutos'
+import CarouselComponent from '../../components/produtos/carrosel/CarouselComponent'
 
 function Home() {
 
@@ -15,18 +16,18 @@ function Home() {
     (state) => state.tokens
   );
 
-  useEffect(() => {
-    if (token == "") {
-      alert("Você precisa estar logado")
-      navigate("/login")
+  // useEffect(() => {
+  //   if (token == "") {
+  //     alert("Você precisa estar logado")
+  //     navigate("/login")
 
-    }
-  }, [token])
+  //   }
+  // }, [token])
 
 
   return (
     <>
-      <Grid className="background"
+      <Grid className="background"        
         container
         direction="row"
         justifyContent="center"
@@ -64,7 +65,7 @@ function Home() {
                 Meus produtos
               </Button>
             </Link>
-            <Link to='/formularioProdutos' className="text-decorator-none">
+            <Link to='/formularioProduto' className="text-decorator-none">
               <Button className="button" variant="outlined">
                 Novo produto
               </Button>
@@ -79,16 +80,18 @@ function Home() {
             height="500px"
           />
         </Grid>
+        <Grid xs={12} className="postagens">
+          <CarouselComponent/>
+        </Grid>
         <Grid xs={12} className="nav-home">
          <Box>
-          <Typography>
-            Lista produtos
-          </Typography>
+         
          </Box>
         </Grid>
         <Grid xs={12}>
          <TabProdutos/>
         </Grid>
+        
       </Grid>
     </>
   )

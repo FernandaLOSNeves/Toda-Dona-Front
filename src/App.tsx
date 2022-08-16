@@ -26,7 +26,7 @@ function App() {
       <div style={{ minHeight: '100vh' }}>
       <ToastContainer />
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/contato" element={<Contato />} />
@@ -39,7 +39,7 @@ function App() {
           <Route path="/cadastrarCategoria" element={<CadastrarCategoria />} />
           <Route path="/cadastrarCategoria/:id" element={<CadastrarCategoria />} />
           <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
-        </Routes>
+          </Routes>
       </div>
       <Footer />
     </Router>

@@ -22,21 +22,21 @@ function ListaCategoria() {
   );
 
 
-  useEffect(() => {
-    if (token == "") {
-        toast.error("Você precisa estar logada", {
-            position: "top-right",
-            autoClose: 3500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: 'light'
-        });
-        navigate("/login");
-    }
-}, [token]);
+//   useEffect(() => {
+//     if (token == "") {
+//         toast.error("Você precisa estar logada", {
+//             position: "top-right",
+//             autoClose: 3500,
+//             hideProgressBar: false,
+//             closeOnClick: true,
+//             pauseOnHover: true,
+//             draggable: true,
+//             progress: undefined,
+//             theme: 'light'
+//         });
+//         navigate("/login");
+//     }
+// }, [token]);
 
   async function getCategoria() {
     await busca('/categoria', setCategorias, {
