@@ -27,7 +27,7 @@ function Navbar() {
             theme: "colored",
             progress: undefined,
         });
-       navigate('/login')
+       navigate('/')
     }
     
     var navbarComponent;
@@ -105,7 +105,7 @@ function Navbar() {
             
             <Box className='espaco'>
                 <Box display="flex" justifyContent="start" className='corNav'>
-                    <Link to='/home' className='text-decorator-none'>
+                    <Link to='/' className='text-decorator-none'>
                         <Box mx={1} className='corNav'>
                             <Typography variant="h6" color="inherit">
                                 • Home

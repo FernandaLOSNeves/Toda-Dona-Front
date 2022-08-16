@@ -17,6 +17,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import { Provider } from 'react-redux'
 import store from './store/store'
 import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto'
+import Home2 from './paginas/home/Home2'
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
       <div style={{ minHeight: '100vh' }}>
       <ToastContainer />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home2 />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/contato" element={<Contato />} />

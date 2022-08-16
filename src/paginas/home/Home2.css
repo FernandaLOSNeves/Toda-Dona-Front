@@ -1,0 +1,29 @@
+.button {
+  background-color: black!important;
+  margin-right: 20px!important;
+  margin-top: 20px!important;
+  color: white!important;
+  font-weight: bold!important;
+  border-radius: 50px!important;
+}
+
+.button2 {
+  background-color: #a30f9e!important;
+  margin-right: 20px!important;
+  margin-top: 20px!important;
+  color: white!important;
+  font-weight: bold!important;
+  border-radius: 50px!important;
+}
+
+.background {
+  background-color: #ffe2ff !important;
+}
+
+.nav-home{
+background-color: #a30f9e;
+height: 50px;
+color: white;
+text-align: center;
+font-weight: bold;
+}

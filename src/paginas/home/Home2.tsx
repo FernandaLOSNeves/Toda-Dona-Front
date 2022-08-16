@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Typography, Grid, Button } from '@material-ui/core'
 import { Box } from '@mui/material'
-import './Home.css'
+import './Home2.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
@@ -9,7 +9,7 @@ import ModalProduto from '../../components/produtos/modalProdutos/ModalProduto'
 import TabProdutos from '../../components/produtos/tabprodutos/TabProdutos'
 import CarouselComponent from '../../components/produtos/carrosel/CarouselComponent'
 
-function Home() {
+function Home2() {
 
   let navigate = useNavigate();
   const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -17,9 +17,8 @@ function Home() {
   );
 
   useEffect(() => {
-    if (token !== "") {
-      // alert("Você precisa estar logado")
-      navigate("/home")
+    if (token == "") {
+      navigate("/")
 
     }
   }, [token])
@@ -43,7 +42,7 @@ function Home() {
               component="h3"
               align="center"
             >
-              Seja bem vinda!
+              Seja bem-vindo!
             </Typography>
             <Typography
               className="fonte"
@@ -53,7 +52,7 @@ function Home() {
               component="h5"
               align="center"
             >
-              O que você quer vender hoje?
+              O que você procura hoje?
             </Typography>
           </Box>
           <Box display="flex" justifyContent="center">
@@ -62,12 +61,12 @@ function Home() {
             </Box>
             <Link to='/produtos' className="text-decorator-none">
               <Button className="button" variant="outlined">
-                Meus produtos
+                Ver produtos
               </Button>
             </Link>
-            <Link to='/formularioProduto' className="text-decorator-none">
+            <Link to='/contato' className="text-decorator-none">
               <Button className="button" variant="outlined">
-                Novo produto
+                Quem somos
               </Button>
             </Link>
           </Box>
@@ -88,12 +87,12 @@ function Home() {
          
          </Box>
         </Grid>
-        <Grid xs={12}>
+        {/* <Grid xs={12}>
          <TabProdutos/>
-        </Grid>
+        </Grid> */}
         
       </Grid>
     </>
   )
 }
-export default Home
+export default Home2
