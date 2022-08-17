@@ -6,6 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import './DeletarProduto.css';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 function DeletarProduto() {
   let navigate = useNavigate();
@@ -17,7 +18,16 @@ function DeletarProduto() {
 
   useEffect(() => {
     if (token === "") {
-      alert("Você precisa estar logado")
+      toast.success("Produto deletado com sucesso", {
+        position: "top-right",
+        autoClose: 3500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light'
+      });
       navigate("/login")
 
     }
@@ -44,7 +54,16 @@ function DeletarProduto() {
         'Authorization': token
       }
     });
-    alert('Postagem deletada com sucesso');
+    toast.success("Produto deletado com sucesso", {
+      position: "top-right",
+      autoClose: 3500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'light'
+    });
     navigate('/produtos')
   }
 

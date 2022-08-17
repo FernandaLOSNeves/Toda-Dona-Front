@@ -35,13 +35,13 @@ function Contato() {
         </Grid>
       </Grid>
       <Grid xs={12} className='redir'>
-        <h3>Quer saber mais informações sobre nós? mande um email para <a className='cru' href="mailto:todainformada@gmail.com">todainformada@gmail.com</a></h3>
+        <h3>Quer saber mais informações sobre nós? Mande um email para <a className='cru' href="mailto:todainformada@gmail.com">todainformada@gmail.com</a></h3>
       </Grid>
       <Grid xs={12} className='redir'>
-        <h3>Gostaria de ser uma investidora? escreva para: <a className='cru' href="mailto:todadonainvestidores@gmail.com">todadonainvestidores@gmail.com</a></h3>
+        <h3>Gostaria de ser uma investidora? Escreva para: <a className='cru' href="mailto:todadonainvestidores@gmail.com">todadonainvestidores@gmail.com</a></h3>
       </Grid>
       <Grid xs={12} className='redir2'>
-        <h3>Quer vender conosco? <a className='cru' href="/cadastro">Cadastre-se</a> ou faça <a className='cru' href="/login">login</a> para continuar.</h3>
+        <h3>Quer vender conosco? <a className='cru' href="/cadastro">Cadastre-se</a> ou faça <a className='cru' href="/login">Login</a> para continuar.</h3>
       </Grid>
     </>
   )
