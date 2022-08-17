@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { busca } from '../../../services/Service'
-import {Box} from '@mui/material';
-import {Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Box } from '@mui/material';
+import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './ListaProdutos.css';
 import { useNavigate } from 'react-router-dom'
 import Produto from '../../../models/Produto';
@@ -20,21 +20,21 @@ function ListaProdutos() {
     (state) => state.tokens
   );
 
-//   useEffect(() => {
-//     if (token == "") {
-//         toast.error("Você precisa estar logada", {
-//             position: "top-right",
-//             autoClose: 3500,
-//             hideProgressBar: false,
-//             closeOnClick: true,
-//             pauseOnHover: true,
-//             draggable: true,
-//             progress: undefined,
-//             theme: 'light'
-//         });
-//         navigate("/login");
-//     }
-// }, [token]);
+  //   useEffect(() => {
+  //     if (token == "") {
+  //         toast.error("Você precisa estar logada", {
+  //             position: "top-right",
+  //             autoClose: 3500,
+  //             hideProgressBar: false,
+  //             closeOnClick: true,
+  //             pauseOnHover: true,
+  //             draggable: true,
+  //             progress: undefined,
+  //             theme: 'light'
+  //         });
+  //         navigate("/login");
+  //     }
+  // }, [token]);
 
   async function getProduto() {
     await busca("/produto", setProdutos, {
@@ -53,8 +53,8 @@ function ListaProdutos() {
     <>
       {
         produtos.map(produto => (
-          
-          <Box m={6}  >
+
+          <Box m={6} className='cardtamanho'  >
             <Card  variant="outlined">
               <CardContent  >
                 <Typography color="textSecondary" gutterBottom>
@@ -67,13 +67,13 @@ function ListaProdutos() {
                   {produto.descricao_produto}
                 </Typography>
                 <Box>
-                <img src={produto.fotoProduto} alt="foto produto" className="imagem-produto" />
+                  <img src={produto.fotoProduto} alt="foto produto" className="imagem-produto" />
                 </Box>
-      
+
                 <Typography variant="body2" component="p">
                   {produto.categorias?.categoria}
                 </Typography>
-                <Typography variant="body2" component="p">
+                <Typography variant="body2" component="p">R$
                   {produto.valor_produto}
                 </Typography>
               </CardContent>
@@ -94,12 +94,12 @@ function ListaProdutos() {
                       </Button>
                     </Box>
                   </Link>
-                
+
                 </Box>
               </CardActions>
             </Card>
           </Box>
-          
+
         ))
       }
     </>
@@ -107,3 +107,4 @@ function ListaProdutos() {
 }
 
 export default ListaProdutos;
+

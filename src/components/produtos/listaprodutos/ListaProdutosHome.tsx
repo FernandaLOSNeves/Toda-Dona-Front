@@ -78,7 +78,7 @@ function ListaProdutosHome() {
               </CardContent>
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
-                <Link to={`/deletarProduto/${produto.id}`} className="text-decorator-none">
+                <Link to={`/cadastroUsuario`} className="text-decorator-none">
                     <Box mx={1}>
                       <Button variant="contained" size='small' color="secondary">
                         adicionar ao carrinho

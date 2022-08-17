@@ -65,8 +65,17 @@ function CadastrarCategoria() {
           Authorization: token
         }
       })
-      alert('Categoria atualizada com sucesso')
-    } else {
+      toast.success('Categoria atualizada com sucesso', {
+        position: "top-right",
+        autoClose: 3500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+    }
+     else {
       post(`/categoria`, categoria, setCategoria, {
         headers: {
           Authorization: token

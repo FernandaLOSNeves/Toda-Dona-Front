@@ -1,7 +1,6 @@
 .img {
-    width: 500px;
+    width: 700px;
     height: 500px;
-    object-fit: cover;
-    min-width: 300px;
-    max-width: 200px;
+    
+    
 }

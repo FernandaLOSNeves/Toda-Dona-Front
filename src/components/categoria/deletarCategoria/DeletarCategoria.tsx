@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 import { buscaId, deleteId } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
 import { toast } from 'react-toastify';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { useSelector } from 'react-redux';
 
 
 function DeletarCategoria() {
   let navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
-  const [token, setToken] = useLocalStorage('token');
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
   const [categoria, setCategoria] = useState<Categoria>()
 
   useEffect(() => {
