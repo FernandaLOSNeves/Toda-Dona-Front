@@ -23,3 +23,30 @@
 .textos2{
    color: white;
 }
+
+.background-2{
+    background-color: #FFC7F8;
+    height: 200px;
+}
+
+.fonte1 {
+    font-family: 'Magilio', sans-serif!important; 
+    font-size: 16px;
+    padding-left: 50px!important;
+}
+
+
+.fonte2{
+    font-family: 'Magilio', sans-serif!important; 
+    font-weight: bold!important;
+    font-size: 32px!important;
+    color: #A30F93!important;
+    padding-left: 50px!important;
+}
+
+.textfield{
+    background-color: white;
+    width: 300px!important;
+    border-radius: 30px!important;
+    
+}
