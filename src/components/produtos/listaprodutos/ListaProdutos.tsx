@@ -53,53 +53,55 @@ function ListaProdutos() {
     <>
       {
         produtos.map(produto => (
-
-          <Box m={6} className='cardtamanho'  >
-            <Card  variant="outlined">
-              <CardContent  >
-                <Typography color="textSecondary" gutterBottom>
+        
+          <Box m={6} className='cardtamanho cardflex'   >
+            <Card className='cardPd' variant="outlined">
+              <CardContent>
+                <Typography className='conteudoPd' color="textSecondary" gutterBottom>
                   Produtos
                 </Typography>
-                <Typography variant="h5" component="h2">
+                <Typography className='conteudoPd' variant="h5" component="h2">
                   {produto.nome_produto}
                 </Typography>
-                <Typography variant="body2" component="p">
+                <Typography className='conteudoPd' variant="body2" component="p">
                   {produto.descricao_produto}
                 </Typography>
                 <Box>
-                  <img src={produto.fotoProduto} alt="foto produto" className="imagem-produto" />
+                  <img  src={produto.fotoProduto} alt="foto produto" className="imagem-produto " />
                 </Box>
 
                 <Typography variant="body2" component="p">
                   {produto.categorias?.categoria}
                 </Typography>
-                <Typography variant="body2" component="p">R$
+                <Typography className='conteudoPd' variant="body2" component="p">R$
                   {produto.valor_produto}
                 </Typography>
               </CardContent>
               <CardActions>
-                <Box display="flex" justifyContent="center" mb={1.5}>
+                <Box  mb={1.5}>
 
+                    <Box className='btnspace'>
                   <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none" >
-                    <Box mx={1}>
-                      <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                    <Box className='btncard' mx={1}>
+                      <Button  variant="contained" className="marginLeft btncarrinho" size='small' color="primary" >
                         atualizar
                       </Button>
                     </Box>
                   </Link>
                   <Link to={`/deletarProduto/${produto.id}`} className="text-decorator-none">
-                    <Box mx={1}>
-                      <Button variant="contained" size='small' color="secondary">
+                    <Box className='btncard' mx={1}>
+                      <Button className='btncarrinho'  variant="contained" size='small' color="secondary">
                         deletar
                       </Button>
                     </Box>
                   </Link>
-
+                  </Box>
                 </Box>
               </CardActions>
             </Card>
           </Box>
-
+          
+ 
         ))
       }
     </>

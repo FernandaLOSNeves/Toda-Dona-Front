@@ -1,21 +1,51 @@
 .text-decorator-none {
     text-decoration: none;
+    
 }
 
-.cardtamanho{
-    max-width: 300px;
-  
-}
+
 
 .imagem-produto{
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
+    
+}
+.conteudoPd{
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    top:10px; 
+     
+    
 }
 
 .cardflex{
-
+    display: inline-block;
+       
+}
+.cardPd{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.btnspace{
+    
     display: flex;
     flex-direction: row;
-    justify-content: space-between ;
-       
+    align-items: center;
+    
+}
+.btncarrinho{
+    padding: 0.6rem;
+    border-radius: 5px;
+    
+
+}
+
+.btncard{
+    margin-top: 5px;
+    display: flex !important;
+    justify-content: flex-start !important;
 }
