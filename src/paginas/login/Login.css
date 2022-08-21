@@ -8,7 +8,7 @@
 */
 .branco{
     color: white;
-    text-decoration: none;
+    text-decoration: none !important;
     font-size: 20px!important;
 }
 
@@ -37,28 +37,25 @@
 }
 
 body{
-    min-height: 30vh!important;
     background: transparent;
     
 }
 
 .Login{
     display: flex;
-    justify-content: center;
-    padding: 5%;
+    justify-content:flex-start;
     background:rgba(76, 175, 79, 0);
-    
+    margin-top: -180px
 }
 
 .card{
-    width: 200px;
-    height: 60vh;
+    width: 80vw!important;
+    height: 70vh!important;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     background-image: linear-gradient(to top,#a30f9e, #ff99ff)!important;
-    border-radius: 20px;
+    border-radius: 90px;
     stroke: #a30f9e;
     outline: none!important;
 }

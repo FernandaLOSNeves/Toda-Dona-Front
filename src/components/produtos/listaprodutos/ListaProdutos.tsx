@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { busca } from '../../../services/Service'
 import { Box } from '@mui/material';
-import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
 import './ListaProdutos.css';
 import { useNavigate } from 'react-router-dom'
 import Produto from '../../../models/Produto';
@@ -51,57 +51,51 @@ function ListaProdutos() {
 
   return (
     <>
+      <h1 className='centro'>Produtos</h1>
+      <Grid xs={12} className='cardFlexProd'>
       {
         produtos.map(produto => (
 
-          <Box m={6} className='cardtamanho' >
+          <Box m={6} className='cardtamanho cardFlex' >
             <Card className='cardb' variant="outlined">
               <CardContent  >
-                <Typography color="textSecondary" gutterBottom>
-                  Produtos
-                </Typography>
-                <Typography variant="h5" component="h2">
+                <Typography className='tipo' variant="h5" component="h2">
                   {produto.nome_produto}
                 </Typography>
-                <Typography variant="body2" component="p">
+                <Typography className='tamanhodescricao tipo' variant="body2" component="p">
                   {produto.descricao_produto}
                 </Typography>
                 <Box>
-                  <img src={produto.fotoProduto} alt="foto produto" className="imagem-produto" />
+                  <img src={produto.fotoProduto} alt="foto produto" className="img" />
                 </Box>
 
-                <Typography variant="body2" component="p">
+                <Typography className='tipo' variant="body2" component="p">
                   {produto.categorias?.categoria}
                 </Typography>
-                <Typography variant="body2" component="p">R$
-                  {produto.valor_produto}
+                <Typography className='tipo' variant="h4" component="p">
+                  R${produto.valor_produto}
                 </Typography>
-              </CardContent>
-              <CardActions>
-                <Box display="flex" justifyContent="center" mb={1.5}>
-
-                  <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none" >
+                <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none" >
                     <Box mx={1}>
-                      <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                      <Button variant="contained" className="botProd" size='small'>
                         atualizar
                       </Button>
                     </Box>
                   </Link>
                   <Link to={`/deletarProduto/${produto.id}`} className="text-decorator-none">
                     <Box mx={1}>
-                      <Button variant="contained" size='small' color="secondary">
+                      <Button variant="contained" size='small' className='botProd2'>
                         deletar
                       </Button>
                     </Box>
                   </Link>
-
-                </Box>
-              </CardActions>
+              </CardContent>
             </Card>
           </Box>
 
         ))
       }
+      </Grid>
     </>
   )
 }

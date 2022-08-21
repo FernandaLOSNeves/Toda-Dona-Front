@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import ModalLogin from '../../components/produtos/modalLogin/ModalLogin'
-
+import CarouselProdComponent from '../../components/produtos/carrosel/CarouselProdComponent'
 import CarouselComponent from '../../components/produtos/carrosel/CarouselComponent'
 import TabProdutos2 from '../../components/produtos/tabprodutos/TabProdutos2'
 
@@ -27,39 +27,46 @@ function Home2() {
 
   return (
     <>
-      <Grid className="background"        
+      <Grid className="background"
         container
         direction="row"
         justifyContent="center"
         alignItems="center"
       >
-        <Grid alignItems="center" item xs={6}>
-          <Box>
-          <CarouselComponent/>
+
+        <Grid alignItems="center" item xs={12}>
+          <Box height="380px">
+            <CarouselComponent />
           </Box>
-        
+
         </Grid>
-        <Grid item xs={6}>
+
+        <Grid xs={12} className="nav-home">
+        </Grid>
+
+        <Grid xs={12}>
+          <Typography className='marginText' align='center' variant='h4'>
+            Algumas ofertas que podem ser do seu interesse:
+          </Typography>
+        </Grid>
+
+        <Grid xs={12}>
+          <CarouselProdComponent />
+        </Grid>
+
+      </Grid>
+
+
+
+
+      {/* <Grid item xs={1}>
           <img
             src="https://imagizer.imageshack.com/v2/1000x596q90/924/SUD0SM.png"
             alt=""
             width="700px"
-            height="500px"
+            height="483px"
           />
-        </Grid>
-        <Grid xs={12} className="postagens">
-          
-        </Grid>
-        <Grid xs={12} className="nav-home">
-         <Box>
-         
-         </Box>
-        </Grid>
-        <Grid xs={12}>
-         <TabProdutos2/>
-        </Grid>
-        
-      </Grid>
+        </Grid> */}
     </>
   )
 }

@@ -66,7 +66,7 @@ function Login() {
     <Grid container direction="row" justifyContent="center" alignItems="center" className='Login'>
       {/* 1° tela do login  */}
       <Grid alignItems="center" xs={8} className='card'>
-        <Box paddingX={20} paddingY={20}>
+        <Box>
           <form onSubmit={onSubmit}>
             <Typography
               variant="h3"

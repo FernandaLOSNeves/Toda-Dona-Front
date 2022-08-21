@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Modal from '@mui/material/Modal';
-import {Box } from "@mui/material"
+import { Box } from "@mui/material"
 import CloseIcon from '@material-ui/icons/Close';
 import Login from '../../../paginas/login/Login';
 import { Typography } from '@material-ui/core';
@@ -21,14 +21,12 @@ function getModalStyle() {
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    paper: {
+    Japer: {
       position: 'absolute',
-      width: '1000px',
-      backgroundColor: theme.palette.background.paper,
-      
-      border: '2px solid #000',
+      width: '1300px 200px',
+      height:'200px',
+      backgroundColor: "transparent",
       borderRadius: '20px',
-      boxShadow: theme.shadows[5],
       padding: theme.spacing(1),
     },
   }),
@@ -48,7 +46,7 @@ function ModalLogin () {
   };
 
   const body = (
-    <div style={modalStyle} className={classes.paper}>
+    <div style={modalStyle} className={classes.Japer}>
       <Box display="flex" justifyContent="flex-end" className="cursor">
         <CloseIcon onClick={handleClose}/>
       </Box>
@@ -57,8 +55,12 @@ function ModalLogin () {
   );
 
   return (
-    <div>
-      <Typography onClick={handleOpen} variant="h6" color="inherit" className='cursor'>
+    <div className='topoPg'>
+      <Typography 
+      onClick={handleOpen} 
+      variant="h6" 
+      color="inherit" 
+      className='cursor'>
         • Entrar    
       </Typography>
       <Modal

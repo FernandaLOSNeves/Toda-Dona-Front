@@ -6,24 +6,22 @@ import './CarouselComponent.css'
 
 function CarouselComponent() {
     var items = [
-        { img: "https://imageshack.com/i/pomDIywAj"},
-        { img: "https://imageshack.com/i/pmM1upwej" },
-        { img: "https://imageshack.com/i/pnOq8fICj" },
-        
-        
+        { img: "https://imageshack.com/i/pnkBVnqYj"},
+        { img: "https://imageshack.com/i/pn4UjYqzj" },
+        { img: "https://imageshack.com/i/poIXBr5Kj" },
     ]
 
     return (
-        <Carousel isRTL={false}>
+        <Carousel className='carosel' isRTL={false} enableAutoPlay autoPlaySpeed={5000} showArrows={false}>
             {
                 items.map(item => (
                     <>
-                        <img className='img' src={item.img} alt="Item" />
+                        <img className='imgcar' src={item.img} alt="Item" />
                     </>
                 ))
             }
         </Carousel>
-    )
+   )
 }
 
 export default CarouselComponent

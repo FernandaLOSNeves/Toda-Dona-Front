@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { busca } from '../../../services/Service'
-import {Box} from '@mui/material';
-import {Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Box } from '@mui/material';
+import { Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
 import './ListaProdutosHome.css';
 import { useNavigate } from 'react-router-dom'
 import Produto from '../../../models/Produto';
@@ -22,19 +22,19 @@ function ListaProdutosHome() {
 
   useEffect(() => {
     if (token !== "") {
-        toast.error("Você precisa estar logada", {
-            position: "top-right",
-            autoClose: 3500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: 'light'
-        });
-        navigate("/login");
+      toast.error("Você precisa estar logada", {
+        position: "top-right",
+        autoClose: 3500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light'
+      });
+      navigate("/login");
     }
-}, [token]);
+  }, [token]);
 
   async function getProduto() {
     await busca("/produto", setProdutos, {
@@ -51,46 +51,43 @@ function ListaProdutosHome() {
 
   return (
     <>
-      {
-        produtos.map(produto => (
-          <Box m={2} className='flex-container'>
+      <h1 className='centro'>Produtos</h1>
+      <h3 className='centro'>Uma lista com todos os produtos</h3>
+      <Grid xs={12} className='cardFlexProd'>
+        {produtos.map(produto => (
+          <Box m={2} className='cardFlex'>
             <Card className='cardb' variant="outlined">
               <CardContent>
-                <Typography className='tamanhotitulo' color="textSecondary" gutterBottom>
-                  Produtos
-                </Typography>
-                <Typography variant="h5" component="h2">
+                <Typography className='tipo' variant="h5" component="h2">
                   {produto.nome_produto}
                 </Typography>
-                <Typography className='tamanhodescricao' variant="body2" component="p">
+                <Typography className='tamanhodescricao tipo' variant="body2" component="p">
                   {produto.descricao_produto}
                 </Typography>
                 <Box>
-                <img src={produto.fotoProduto} alt="foto produto" className="imagem-produto" />
+                  <img src={produto.fotoProduto} alt="foto produto" className="img" />
                 </Box>
-      
-                <Typography variant="body2" component="p">
+
+                <Typography className='tipo' variant="body2" component="p">
                   {produto.categorias?.categoria}
                 </Typography>
-                <Typography variant="h4" component="p">
+                <Typography className='tipo' variant="h4" component="p">
                   R${produto.valor_produto}
                 </Typography>
-              </CardContent>
-              <CardActions>
-                <Box display="flex" justifyContent="flex-start" mb={1.5}>
                 <Link to={`/cadastroUsuario`} className="text-decorator-none">
-                    <Box mx={1}>
-                      <Button className='btncarrinho' variant="contained" size='small' color="secondary">
-                        adicionar ao carrinho
-                      </Button>
-                    </Box>
-                  </Link>
-                </Box>
-              </CardActions>
+                  <Box mx={1}>
+                    <Button className='btncarrinho' variant="contained" size='small' color="secondary">
+                      adicionar ao carrinho
+                    </Button>
+                  </Box>
+                </Link>
+              </CardContent>
             </Card>
           </Box>
-        ))
-      }
+        )
+        )
+        }
+      </Grid>
     </>
   )
 }

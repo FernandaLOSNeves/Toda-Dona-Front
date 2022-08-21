@@ -8,6 +8,8 @@
 
 .backnav{
     background-color: #ffffff !important;
+    box-shadow: -1px 5px 16px 5px rgba(163,15,158,0.25);
+    z-index: 3;
 }
 
 h6{
@@ -24,6 +26,12 @@ h6{
     color: #a30f9e!important;
     align-items: center;
     margin-right: 450px;
+}
+
+
+.campo{
+    width: 400px;
+    height: 20px;
 }
 
 .tamImg{

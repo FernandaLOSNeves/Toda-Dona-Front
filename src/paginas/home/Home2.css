@@ -16,14 +16,22 @@
   border-radius: 50px!important;
 }
 
+h4{
+    font-family: 'Magilio', sans-serif!important; 
+}
+
 .background {
   background-color: #ffe2ff !important;
 }
 
 .nav-home{
 background-color: #a30f9e;
-height: 50px;
+height: 40px;
 color: white;
 text-align: center;
 font-weight: bold;
+}
+
+.marginText{
+  margin: 10px!important;
 }
