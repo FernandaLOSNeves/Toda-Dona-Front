@@ -37,14 +37,16 @@
 }
 
 body{
-    min-height: 10vh!important;
+    min-height: 30vh!important;
+    background: transparent;
+    
 }
 
 .Login{
     display: flex;
     justify-content: center;
     padding: 5%;
-    background-color: white;
+    background:rgba(76, 175, 79, 0);
     
 }
 

@@ -1,18 +1,11 @@
-.imagem2{
-    background-image: url(https://imagizer.imageshack.com/v2/1000x596q90/924/SUD0SM.png) !important;
-    background-repeat: no-repeat !important; 
-    width: 100vh !important; 
-    min-height: 100vh !important; 
-    background-size: cover !important; 
-    background-position: center !important;
-}
+
 
 .textos2{
     font-weight: bold !important;
 }
 
 .btnCad{
-    background-color: #a30f9e!important;
+    background-color: #ff99ff!important;
     margin-right: 10px!important;
     color: white!important;
 }
@@ -26,3 +19,20 @@
 .text-decorator-none2{
     text-decoration: none
 }
+
+.cardcadastrar{
+    
+    background-image: linear-gradient(to top,#a30f9e, #ff99ff)!important;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+
+.campocadastrar{
+    
+    background-color:white !important; 
+    border-radius: 10px;
+     
+}
+

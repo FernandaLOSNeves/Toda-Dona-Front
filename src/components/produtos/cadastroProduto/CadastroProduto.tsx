@@ -8,7 +8,8 @@ import {
   InputLabel,
   MenuItem,
   FormControl,
-  FormHelperText
+  FormHelperText,
+  Box
 } from '@mui/material'
 import './CadastroProduto.css'
 import { useNavigate, useParams } from 'react-router-dom'
@@ -137,17 +138,19 @@ function CadastroProduto() {
   }
 
   return (
-    <Container maxWidth="sm" className="topo">
+    <Container maxWidth="sm"  >
+      <Box className='cardcadastrarproduto'>
       <form onSubmit={onSubmit}>
         <Typography
+          className='textocor'
           variant="h3"
-          color="textSecondary"
           component="h1"
           align="center"
         >
           Formulário de cadastro produto
         </Typography>
         <TextField
+          className='campocadastrarproduto'
           value={produto.nome_produto}
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
           id="nome_produto"
@@ -159,6 +162,7 @@ function CadastroProduto() {
         />
 
         <TextField
+          className='campocadastrarproduto'
           value={produto.valor_produto}
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
           id="valor_produto"
@@ -170,6 +174,7 @@ function CadastroProduto() {
         />
 
         <TextField
+          className='campocadastrarproduto'
           value={produto.descricao_produto}
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
           id="descricao_produto"
@@ -180,6 +185,7 @@ function CadastroProduto() {
           fullWidth
         />
         <TextField
+          className='campocadastrarproduto'
           value={produto.fotoProduto}
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
           id="fotoProduto"
@@ -195,6 +201,7 @@ function CadastroProduto() {
             Categoria{' '}
           </InputLabel>
           <Select
+          className='campocadastrarproduto margintop'
             labelId="demo-simple-select-helper-label"
             id="demo-simple-select-helper"
             onChange={e =>
@@ -206,15 +213,16 @@ function CadastroProduto() {
             }
           >
             {categorias.map(categoria => (
-              <MenuItem value={categoria.id}>{categoria.categoria}</MenuItem>
+              <MenuItem  value={categoria.id}>{categoria.categoria}</MenuItem>
             ))}
           </Select>
-          <FormHelperText>Escolha a categoria do produto</FormHelperText>
-          <Button type="submit" variant="contained" color="primary">
+          <FormHelperText className='textocor'>Escolha a categoria do produto</FormHelperText>
+          <Button type="submit" variant="contained" className='btncadastrarproduto'>
             Finalizar
           </Button>
         </FormControl>
       </form>
+      </Box>
     </Container>
   )
 }

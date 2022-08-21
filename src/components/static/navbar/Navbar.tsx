@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/actions';
+import ModalLogin from '../../produtos/modalLogin/ModalLogin';
 
 function Navbar() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -132,13 +133,14 @@ function Navbar() {
                         </Box>
                     </Link>
 
-                    <Link to='/login' className='text-decorator-none'>
+                    
                     <Box mx={1} className='container'>
-                        <Typography variant="h6" color="inherit" className='cursor'>
-                            • Entrar
-                        </Typography>
+                       
+                        <ModalLogin/>
+                        
+                        
                     </Box>
-                    </Link>
+                    
 
                 </Box>
             </Box>

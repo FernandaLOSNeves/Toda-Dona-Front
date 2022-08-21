@@ -20,6 +20,7 @@ import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto'
 import Home2 from './paginas/home/Home2'
 import ListaProdutosHome from './components/produtos/listaprodutos/ListaProdutosHome'
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario'
+import ModalLogin from './components/produtos/modalLogin/ModalLogin'
 
 function App() {
   return (

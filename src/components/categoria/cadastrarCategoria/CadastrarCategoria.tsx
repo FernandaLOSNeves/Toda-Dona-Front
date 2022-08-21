@@ -6,6 +6,7 @@ import Categoria from '../../../models/Categoria'
 import { Bounce, toast } from 'react-toastify'
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import './CadastrarCategoria.css'
 
 function CadastrarCategoria() {
   let navigate = useNavigate()
@@ -99,9 +100,10 @@ function CadastrarCategoria() {
   }
 
   return (
-    <Container maxWidth="sm" className="topo">
+    <Container className="cardcadastrarcategoria" maxWidth="sm">
       <form onSubmit={onSubmit}>
         <Typography
+          className='textocor'
           variant="h3"
           color="textSecondary"
           component="h1"
@@ -112,6 +114,7 @@ function CadastrarCategoria() {
         <TextField
           value={categoria.categoria}
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
+          className='campocadastrarcategoria'
           id="categoria"
           label="categoria"
           variant="outlined"
@@ -119,7 +122,7 @@ function CadastrarCategoria() {
           margin="normal"
           fullWidth
         />
-        <Button type="submit" variant="contained" color="primary">
+        <Button className='btncadastrarcategoria' type="submit" variant="contained" color="primary">
           Finalizar
         </Button>
       </form>

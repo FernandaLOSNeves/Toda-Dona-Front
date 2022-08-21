@@ -5,7 +5,7 @@ import './Home2.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
-import ModalProduto from '../../components/produtos/modalProdutos/ModalProduto'
+import ModalLogin from '../../components/produtos/modalLogin/ModalLogin'
 
 import CarouselComponent from '../../components/produtos/carrosel/CarouselComponent'
 import TabProdutos2 from '../../components/produtos/tabprodutos/TabProdutos2'

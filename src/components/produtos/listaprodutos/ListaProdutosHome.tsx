@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { busca } from '../../../services/Service'
 import {Box} from '@mui/material';
 import {Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
-import './ListaProdutos.css';
+import './ListaProdutosHome.css';
 import { useNavigate } from 'react-router-dom'
 import Produto from '../../../models/Produto';
 import { toast } from 'react-toastify';
@@ -53,16 +53,16 @@ function ListaProdutosHome() {
     <>
       {
         produtos.map(produto => (
-          <Box m={2} >
-            <Card variant="outlined">
+          <Box m={2} className='flex-container'>
+            <Card className='cardb' variant="outlined">
               <CardContent>
-                <Typography color="textSecondary" gutterBottom>
+                <Typography className='tamanhotitulo' color="textSecondary" gutterBottom>
                   Produtos
                 </Typography>
                 <Typography variant="h5" component="h2">
                   {produto.nome_produto}
                 </Typography>
-                <Typography variant="body2" component="p">
+                <Typography className='tamanhodescricao' variant="body2" component="p">
                   {produto.descricao_produto}
                 </Typography>
                 <Box>
@@ -77,10 +77,10 @@ function ListaProdutosHome() {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Box display="flex" justifyContent="center" mb={1.5}>
+                <Box display="flex" justifyContent="flex-start" mb={1.5}>
                 <Link to={`/cadastroUsuario`} className="text-decorator-none">
                     <Box mx={1}>
-                      <Button variant="contained" size='small' color="secondary">
+                      <Button className='btncarrinho' variant="contained" size='small' color="secondary">
                         adicionar ao carrinho
                       </Button>
                     </Box>

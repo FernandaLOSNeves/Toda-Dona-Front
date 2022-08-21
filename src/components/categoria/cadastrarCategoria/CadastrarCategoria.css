@@ -1,0 +1,22 @@
+.btncadastrarcategoria{
+    background-color: #ff99ff!important;
+   
+}
+
+.cardcadastrarcategoria{
+    padding: 50px;
+    background-image: linear-gradient(to top,#a30f9e, #ff99ff)!important;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+
+.campocadastrarcategoria{
+    background-color:white !important; 
+    border-radius: 10px;
+}
+
+.textocor{
+    color: white;
+}

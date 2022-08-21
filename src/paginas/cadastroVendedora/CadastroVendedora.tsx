@@ -106,33 +106,33 @@ function CadastroVendedora() {
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid item xs={6} alignItems='center'>
-                <Box paddingX={10} paddingY={10}>
+                <Box  className='cardcadastrar' paddingX={10} paddingY={10}>
                     <form onSubmit={cadastrar}>
-                        <Typography variant='h3' gutterBottom color='textPrimary' align='center' className="textos2"> Cadastrar</Typography>
+                        <Typography variant='h3' gutterBottom color='textPrimary' align='center' className="textos2"> Cadastrar </Typography>
 
 
-                        <TextField value={vendedora.nomeVendedora} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nomeVendedora' label='Nome' variant='outlined' name='nomeVendedora' margin='normal' fullWidth></TextField>
+                        <TextField className='campocadastrar' value={vendedora.nomeVendedora} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nomeVendedora' label='Nome' variant='outlined' name='nomeVendedora' margin='normal' fullWidth></TextField>
 
 
-                        <TextField value={vendedora.cpf} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='cpf' label='CPF' variant='outlined' name='cpf' margin='normal' fullWidth></TextField>
+                        <TextField className='campocadastrar' value={vendedora.cpf} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='cpf' label='CPF' variant='outlined' name='cpf' margin='normal' fullWidth></TextField>
 
 
-                        <TextField value={vendedora.foto_documento} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto_documento' label='Link da foto do documento' variant='outlined' name='foto_documento' margin='normal' fullWidth></TextField>
+                        <TextField className='campocadastrar' value={vendedora.foto_documento} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto_documento' label='Link da foto do documento' variant='outlined' name='foto_documento' margin='normal' fullWidth></TextField>
 
 
-                        <TextField value={vendedora.endereco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='endereco' label='Endereço' variant='outlined' name='endereco' margin='normal' fullWidth></TextField>
+                        <TextField className='campocadastrar' value={vendedora.endereco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='endereco' label='Endereço' variant='outlined' name='endereco' margin='normal' fullWidth></TextField>
 
 
-                        <TextField value={vendedora.telefone} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='telefone' label='Telefone' variant='outlined' name='telefone' margin='normal' fullWidth></TextField>
+                        <TextField className='campocadastrar' value={vendedora.telefone} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='telefone' label='Telefone' variant='outlined' name='telefone' margin='normal' fullWidth></TextField>
 
 
-                        <TextField value={vendedora.email} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='email' label='E-mail' variant='outlined' name='email' margin='normal' type='email' fullWidth></TextField>
+                        <TextField className='campocadastrar' value={vendedora.email} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='email' label='E-mail' variant='outlined' name='email' margin='normal' type='email' fullWidth></TextField>
 
 
-                        <TextField value={vendedora.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth></TextField>
+                        <TextField className='campocadastrar' value={vendedora.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth></TextField>
 
 
-                        <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='Confirme a Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth></TextField>
+                        <TextField className='campocadastrar' value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='Confirme a Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth></TextField>
 
 
 

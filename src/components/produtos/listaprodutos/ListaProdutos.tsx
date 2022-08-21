@@ -54,8 +54,8 @@ function ListaProdutos() {
       {
         produtos.map(produto => (
 
-          <Box m={6} className='cardtamanho'  >
-            <Card  variant="outlined">
+          <Box m={6} className='cardtamanho' >
+            <Card className='cardb' variant="outlined">
               <CardContent  >
                 <Typography color="textSecondary" gutterBottom>
                   Produtos
