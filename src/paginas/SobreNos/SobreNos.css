@@ -57,7 +57,7 @@
     align-items: flex-end!important;
     text-align: center;
     transition: 0.5s ease-in-out;
-    opacity: 0;
+    opacity: 0.3;
 }
 
 .daniel:hover ~ .danielTexto {
@@ -203,6 +203,8 @@ h4{
 
 .padding {
     padding: 3%;
+    display: flex;
+    flex-direction: column;
     width: 98vw!important;
     background: linear-gradient(to bottom, rgba(163, 15, 158, 40%), rgba(163, 15, 158, 70%)), url(https://psiueducacao.com/wp-content/uploads/2019/05/mulheres-empreendedoras.jpg);
     background-repeat: no-repeat;
@@ -211,13 +213,15 @@ h4{
 }
 
 .textoConta {
-    text-align:start!important;
+    text-align:center!important;
     height: 450px !important;
-    max-width: 800px!important;
+    width: 100%!important;
+    align-items: center;
 }
 
 .branco2 {
     color: white;
+    text-align: center!important;
 }
 
 .centro {
@@ -256,6 +260,7 @@ h2 {
     font-size: 80px;
     color: white;
     font-family: 'Magilio', sans-serif;
+    text-align: center;
 }
 
 .display {

@@ -116,7 +116,7 @@ function CadastrarCategoria() {
           onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
           className='campocadastrarcategoria'
           id="categoria"
-          label="categoria"
+          label="Categoria"
           variant="outlined"
           name="categoria"
           margin="normal"

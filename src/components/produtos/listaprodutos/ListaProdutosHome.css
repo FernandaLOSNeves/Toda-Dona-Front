@@ -28,11 +28,13 @@
 	background-color: white!important;
 	color: #a30f9e!important;
 	margin-bottom: 5px!important;
+	z-index: 4;
 }
 
 .botProd2{
 	background-color: white!important;
 	color: red!important;
+	z-index: 4;
 }
 
 .botProd:hover{
@@ -92,8 +94,8 @@ h3{
 	flex-wrap: wrap !important;
 	color: rgba(0, 0, 0, 0) !important;
 	transform: translateY(0px);
-	z-index: 2;
 	font-weight: 500 !important;
+	z-index: 0;
 }
 
 .cardb .btncarrinho {
@@ -123,7 +125,7 @@ h3{
 }
 
 .cardb:hover .tipo {
-	z-index: 4;
+	z-index: 3;
 	opacity: 1 !important;
 	color: white;
 }
@@ -165,4 +167,5 @@ h3{
 	background: #a30f9e !important;
 	color: white !important;
 	transition: 0.6s ease-in;
+	z-index: 5;
 }

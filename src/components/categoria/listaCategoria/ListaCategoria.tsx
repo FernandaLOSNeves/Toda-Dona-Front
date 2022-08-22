@@ -13,6 +13,8 @@ import Categoria from '../../../models/Categoria'
 import { toast } from 'react-toastify'
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import './ListaCategoria.css'
+
 
 function ListaCategoria() {
   const [categorias, setCategorias] = useState<Categoria[]>([])
@@ -22,21 +24,21 @@ function ListaCategoria() {
   );
 
 
-//   useEffect(() => {
-//     if (token == "") {
-//         toast.error("Você precisa estar logada", {
-//             position: "top-right",
-//             autoClose: 3500,
-//             hideProgressBar: false,
-//             closeOnClick: true,
-//             pauseOnHover: true,
-//             draggable: true,
-//             progress: undefined,
-//             theme: 'light'
-//         });
-//         navigate("/login");
-//     }
-// }, [token]);
+  //   useEffect(() => {
+  //     if (token == "") {
+  //         toast.error("Você precisa estar logada", {
+  //             position: "top-right",
+  //             autoClose: 3500,
+  //             hideProgressBar: false,
+  //             closeOnClick: true,
+  //             pauseOnHover: true,
+  //             draggable: true,
+  //             progress: undefined,
+  //             theme: 'light'
+  //         });
+  //         navigate("/login");
+  //     }
+  // }, [token]);
 
   async function getCategoria() {
     await busca('/categoria', setCategorias, {
@@ -52,13 +54,17 @@ function ListaCategoria() {
 
   return (
     <>
+      <Typography align='center' variant='h1'>
+        Categorias
+      </Typography>
       {categorias.map(categoria => (
-        <Box m={2}>
-          <Card variant="outlined">
+        <Box m={6} display='inline-block' >
+
+          <Card variant="outlined" className='cardCat'>
             <CardContent>
-              <Typography color="textSecondary" gutterBottom>
+              {/* <Typography color="textSecondary" gutterBottom>
                 Categoria
-              </Typography>
+              </Typography> */}
               <Typography variant="h5" component="h2">
                 {categoria.categoria}
               </Typography>
@@ -72,7 +78,7 @@ function ListaCategoria() {
                   <Box mx={1}>
                     <Button
                       variant="contained"
-                      className="marginLeft"
+                      className="botAt"
                       size="small"
                       color="primary"
                     >
@@ -85,7 +91,7 @@ function ListaCategoria() {
                   className="text-decorator-none"
                 >
                   <Box mx={1}>
-                    <Button variant="contained" size="small" color="secondary">
+                    <Button variant="contained" size="small" color="secondary" className='botProd2'>
                       deletar
                     </Button>
                   </Box>

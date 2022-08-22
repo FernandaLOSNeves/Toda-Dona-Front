@@ -1,0 +1,26 @@
+.cardCat{
+    padding: 10px!important;
+    flex-direction: row;
+    justify-content:flex-start;
+    width: 300px!important;
+    height: 180px!important;
+    min-height: 100px;
+    border-radius: 20px!important;
+    box-shadow: 12px 12px 25px 0px rgba(0,0,0,0.5);
+}
+
+.botAt{
+	background-color: #a30f9e!important;
+	color: white!important;
+	margin-bottom: 5px!important;
+	z-index: 4;
+}
+
+.botAt:hover {
+	background-color: #a30f9e!important;
+	color: white!important;
+	margin-bottom: 5px!important;
+	z-index: 4;
+    scale: 1.1;
+    transition: 0.4s;
+}

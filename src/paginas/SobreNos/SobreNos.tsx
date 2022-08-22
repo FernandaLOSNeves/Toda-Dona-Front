@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@material-ui/core";
+import { Card, CardContent, Grid, Typography } from "@material-ui/core";
 import { Box } from "@mui/material";
 import React from "react";
 
@@ -22,40 +22,40 @@ function SobreNos() {
         </Grid>
       </Grid>
 
-      <Grid xs={12} className='quebra'>
+      {/* <Grid xs={12} className='quebra'>
         <h3 className='grand'>A TodaDona nasceu com a missão de ser um espaço exclusivo para mulheres realizarem compra e vendas de produtos e serviços com 0% de taxas de serviço cobradas pelo site. Para ajudar toda e qualquer mulher no desenvolvimento do seu negócio.</h3>
-      </Grid>
-      <Grid container className='contain'>
-        <Grid item xs={3} className='cardMVV' 
-        style={{
-            backgroundImage: `url('https://imgsapp2.correiobraziliense.com.br/app/noticia_127983242361/2020/06/02/860419/20200602180756848677a.jpg')`,
-            backgroundSize: "cover",
-            height: "100vh"}}>
-          <h2 className='cardT'>Nossa Missão</h2>
-          <h3 className="cardD">Nossa missão é incluir as mulheres no mercado de vendas online por meio da facilitação da venda de seus produtos ou serviços na internet.</h3>
-        </Grid>
-        <Grid item xs={3} className='cardMVV'
-        style={{
-            backgroundImage: `url('https://img.freepik.com/fotos-premium/estilo-de-mulher-com-binoculos-na-zona-rural-com-montanhas_87910-2960.jpg?w=740')`,
-            backgroundSize: "cover",
-            height: "100vh",
-            width:"60vw"}}>
-          <h2 className='cardT'>Nossa Visão</h2>
-          <h3 className="cardD">Criar um espaço virtual de vendas que permita que mulheres empreendedoras alcancem sua liberdade financeira.</h3>
-        </Grid>
-        <Grid xs={3} className='cardMVV'
-        style={{
-            backgroundImage: `url('https://img.freepik.com/fotos-premium/mao-branca-branca-e-mao-negra-de-etnia-cerrada-em-um-punho-em-um-fundo-rosa-respeito-multirracial-e-conceito-de-compreensao_121946-3504.jpg?w=360')`,
-            backgroundSize: "cover",
-            height: "100vh",
-            width:"60vw"}}>
-          <h2 className='cardT'>Nossos Valores</h2>
-          <h3 className="cardD">Respeito com todes<br/>
-          Empatia<br/>
-          Ética Profissional<br/>
-          Comunicação aberta</h3>
-        </Grid>
-      </Grid>
+      </Grid> */}
+      <Box m={6} className="cardsContato">
+        <Card className="cardInvid">
+          <CardContent>
+            <Typography className="typo1">Nossa Missão</Typography>
+            <Typography className="typo2">
+              Nossa missão é incluir as mulheres no mercado de vendas online por
+              meio da facilitação da venda de seus produtos ou serviços na
+              internet.
+            </Typography>
+          </CardContent>
+        </Card>
+        <Card className="cardInvid">
+          <CardContent>
+            <Typography className="typo1">Nossa Visão</Typography>
+
+            <Typography className="typo2">
+              Criar um espaço virtual de vendas que permita que mulheres
+              empreendedoras alcancem sua liberdade financeira.
+            </Typography>
+          </CardContent>
+        </Card>
+        <Card className="cardInvid">
+          <CardContent>
+            <Typography className="typo1"> Nossos Valores </Typography>
+            <Typography className="typo2">
+              Respeito com todes, empatia, ética profissional e comunicação
+              aberta.{' '}
+            </Typography>
+          </CardContent>
+        </Card>
+      </Box>
         
         
         <Box className='centro fundo branco2'>
