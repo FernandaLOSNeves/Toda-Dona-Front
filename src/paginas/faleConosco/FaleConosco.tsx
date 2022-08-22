@@ -12,7 +12,7 @@ function FaleConosco() {
 
             <Grid item className='padding00' xs={12}>
                 <h1 className='titulo1'>Fale com a gente!</h1>
-                <h2 className='titulo2'>Estamos aqui para te atender e te escutar.<br />Um espaço só para elas.</h2>
+                <h2 className='titulo2'>Estamos aqui para te atender e te escutar.<br/><br/></h2>
             </Grid>
 
             <Grid item xs={6} alignItems='flex-end'>
