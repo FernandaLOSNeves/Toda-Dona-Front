@@ -1,0 +1,46 @@
+
+.titulo1 {
+    font-size: 80px!important;
+    color: white!important;
+    font-family: 'Magilio', sans-serif!important;
+    margin-left: 50px!important;
+    margin-top: 50px!important;
+}
+
+.titulo2 {
+    color: white!important;
+    font-family: 'Magilio', sans-serif!important;
+    font-size: 40px!important;
+    max-width: 400px!important;
+    margin-bottom: 70px!important;
+    margin-left: 150px!important;
+}
+
+.padding00 {
+    padding: 3%;
+    background: url(https://i.imgur.com/n0umyw8.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.margin-right{
+    margin-right: 700px !important;
+}
+
+.letras {
+    font-size: 25px !important;
+    font-family: 'Magilio', sans-serif !important;
+}
+
+.margin-bottom{
+    margin-bottom: 20px!important;
+}
+
+.textos2{
+    font-size: 40px!important;
+    font-family: 'Magilio', sans-serif !important;
+}
