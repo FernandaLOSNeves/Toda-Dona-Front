@@ -21,6 +21,8 @@ import Home2 from './paginas/home/Home2'
 import ListaProdutosHome from './components/produtos/listaprodutos/ListaProdutosHome'
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario'
 import ModalLogin from './components/produtos/modalLogin/ModalLogin'
+import FaleConosco from './paginas/faleConosco/FaleConosco'
+import SobreNos from './paginas/SobreNos/SobreNos'
 
 function App() {
   return (

@@ -24,7 +24,7 @@ function Contato() {
         </Grid>
       </Grid>
 
-      <Grid xs={12} className="quebra">
+      <Grid xs={12} className="quebraa">
         <Typography className="grand">
           A TodaDona nasceu com a missão de ser um espaço exclusivo para
           mulheres realizarem compra e vendas de produtos e serviços com 0% de

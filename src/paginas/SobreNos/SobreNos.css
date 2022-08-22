@@ -2,7 +2,6 @@
     position: relative;
     width: 30rem !important;
     height: 30rem !important;
-    margin: 4rem;
     background-image: linear-gradient(aqua, white);
     z-index: 3!important;
 }

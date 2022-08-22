@@ -44,3 +44,20 @@
     font-size: 40px!important;
     font-family: 'Magilio', sans-serif !important;
 }
+
+.amoeba{
+    position: absolute;
+    left: 680px;
+    z-index: -2;
+    width: 50vw;
+    animation: mexe 20s ease-in-out infinite;
+    transform-origin: 50% 50%
+}
+
+@keyframes mexe {
+        0%   { transform: scale(1)   translate(10px, 90px) ; }
+        50% { transform: scale(1)   translate(10px, 60px); }
+        75% { transform: scale(1.1)   translate(10px, 30px);}
+        85% { transform: scale(1.2)   translate(20px, 75px); }
+        100% { transform: scale(1)   translate(10px, 90px); }
+}

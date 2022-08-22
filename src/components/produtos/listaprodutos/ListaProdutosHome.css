@@ -105,6 +105,7 @@ h3{
 
 .cardb:hover .btncarrinho {
 	transition: 0.5s ease-in;
+	z-index: 5;
 	opacity: 1;
 }
 
@@ -120,6 +121,7 @@ h3{
 }
 
 .cardb:hover .tipo {
+	z-index: 4;
 	opacity: 1 !important;
 	color: white;
 }
@@ -135,7 +137,7 @@ h3{
 	transition: 0.6s ease-in-out;
 	transform: translateY(-15px);
 	color: black !important;
-	z-index: 5;
+	z-index: 0;
 	background: rgba(0, 0, 0, 0.6) !important;
 	box-shadow: 5px 12px 14px 3px rgba(0, 0, 0, 0.28);
 }
@@ -156,8 +158,6 @@ h3{
 	border-radius: 15px;
 	z-index: -1;
 }
-
-
 
 .btncarrinho:hover {
 	background: #a30f9e !important;
