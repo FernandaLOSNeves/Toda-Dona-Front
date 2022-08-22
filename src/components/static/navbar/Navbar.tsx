@@ -128,7 +128,15 @@ function Navbar() {
                     <Link to='/contato' className='text-decorator-none'>
                         <Box mx={1} className='corNav'>
                             <Typography variant="h6" color="inherit">
-                                • Contato
+                                • Sobre nós
+                            </Typography>
+                        </Box>
+                    </Link>
+
+                    <Link to='/faleconosco' className='text-decorator-none'>
+                        <Box mx={1} className='corNav'>
+                            <Typography variant="h6" color="inherit">
+                                • Fale conosco
                             </Typography>
                         </Box>
                     </Link>

@@ -21,6 +21,7 @@ import Home2 from './paginas/home/Home2'
 import ListaProdutosHome from './components/produtos/listaprodutos/ListaProdutosHome'
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario'
 import ModalLogin from './components/produtos/modalLogin/ModalLogin'
+import FaleConosco from './paginas/faleConosco/FaleConosco'
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/contato" element={<Contato />} />
+          <Route path="/faleconosco" element={<FaleConosco />} />
           <Route path="/cadastro" element={<CadastroVendedora />} />
           <Route path="/categorias" element={<ListaCategoria />} />
           <Route path="/produtos" element={<ListaProdutos />} />
