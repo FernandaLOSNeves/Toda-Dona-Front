@@ -23,3 +23,49 @@
 .textos2{
    color: white;
 }
+
+.background-2{
+    background-color: #FFC7F8;
+    height: 200px;
+}
+
+.fonte1 {
+    font-family: 'Magilio', sans-serif!important; 
+    font-size: 16px;
+    padding-left: 50px!important;
+}
+
+
+.fonte2{
+    font-family: 'Magilio', sans-serif!important; 
+    font-weight: bold!important;
+    font-size: 32px!important;
+    color: #A30F93!important;
+    padding-left: 50px!important;
+    margin-bottom: 0px!important;
+}
+
+.textfield{
+    background-color: white;
+    width: 300px!important;
+    border-radius: 5px!important;
+    margin-left: 42px!important;
+    margin-top: 10px!important;
+    margin-bottom: 50px!important;
+}
+
+.css-2843h7{
+    padding: 10px!important;
+}
+
+.botao{
+    background-color: white!important;
+    margin: 5px!important;
+    margin-top: 20px!important;
+    color: #A30F93;
+}
+
+.botao:hover{
+    background-color: #A30F93!important;
+    color: white;
+}

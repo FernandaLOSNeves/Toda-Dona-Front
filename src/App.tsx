@@ -21,6 +21,7 @@ import Home2 from './paginas/home/Home2'
 import ListaProdutosHome from './components/produtos/listaprodutos/ListaProdutosHome'
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario'
 import ModalLogin from './components/produtos/modalLogin/ModalLogin'
+import SobreNos from './paginas/SobreNos/SobreNos'
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
           <Route path="/cadastrarCategoria/:id" element={<CadastrarCategoria />} />
           <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
           <Route path="/cadastroUsuario" element={<CadastroUsuario />} />
+          <Route path='/sobrenos' element={<SobreNos />}/>
           </Routes>
       </div>
       <Footer />
