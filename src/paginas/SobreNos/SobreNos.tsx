@@ -8,7 +8,7 @@ function SobreNos() {
 
     var sobreNosComponent;
 
-    sobreNosComponent = <Grid className='container' alignItems="center" xs={12}>
+    sobreNosComponent = <Grid className='container1' alignItems="center" xs={12}>
         <Box>
             <Typography variant='h1' align='center'>
                 Sobre Nós
