@@ -38,13 +38,15 @@
 .botProd:hover{
 	background-color: #a30f9e!important;
 	color: white!important;
-	transition: 0.6s
+	transition: 0.6s;
+	z-index: 4;
 }
 
 .botProd2:hover{
 	background-color: red!important;
 	color: white!important;
 	transition: 0.6s
+	z-index: 4;
 }
 
 .cardb .botProd{
@@ -90,7 +92,7 @@ h3{
 	flex-wrap: wrap !important;
 	color: rgba(0, 0, 0, 0) !important;
 	transform: translateY(0px);
-	z-index: 3;
+	z-index: 2;
 	font-weight: 500 !important;
 }
 
@@ -156,7 +158,7 @@ h3{
 	top: 0;
 	left: 0;
 	border-radius: 15px;
-	z-index: -1;
+	z-index: -1!important;
 }
 
 .btncarrinho:hover {
