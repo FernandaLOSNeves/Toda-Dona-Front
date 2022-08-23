@@ -116,8 +116,8 @@ function SobreNos() {
                 <h4>Fernanda Neves</h4>
             </Typography>
             <Typography className="aparText">
-                <h1>Oi, eu sou a Fernanda Neves</h1>
-                <h4>Eu sou a Fernanda Neves, tenho 31 anos, sou Engenheira Química e Bacharela em Ciência e Tecnologia pela Federal de Alfenas e faço Pós em Engenharia de Qualidade, além de ter feito o bootcamp da Generation Brasil. 
+                <h1>Oi, eu sou a Fernanda Neves! </h1>
+                <h4>Tenho 31 anos, sou Engenheira Química e Bacharela em Ciência e Tecnologia pela Federal de Alfenas e faço Pós em Engenharia de Qualidade, além de ter feito o bootcamp da Generation Brasil. 
 Estagiei e trabalhei em áreas das engenharias de materiais e ambiental, mas o que eu amava estudar era programação. Vi na Generation a oportunidade de direcionar minha transição de carreira como desenvolvedora web em Java. 
 Sou resiliente, criativa e comunicativa, e no projeto pude desenvolver mais essas habilidades trabalhando em equipe.
 </h4>
