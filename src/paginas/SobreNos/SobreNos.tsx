@@ -117,7 +117,10 @@ function SobreNos() {
             </Typography>
             <Typography className="aparText">
                 <h1>Oi, eu sou a Fernanda Neves</h1>
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi tortor, porttitor vitae lacus a, luctus porttitor magna. Curabitur at ante at turpis sollicitudin suscipit. Integer at nisi ut magna suscipit imperdiet. Donec vehicula rhoncus pellentesque. Sed faucibus auctor tellus, sit amet iaculis massa vulputate ac. Donec fermentum vitae diam non suscipit. Integer vulputate, nunc vel euismod eleifend, nisi libero pretium leo, et faucibus dui neque vitae quam.</h4>
+                <h4>Eu sou a Fernanda Neves, tenho 31 anos, sou Engenheira Química e Bacharela em Ciência e Tecnologia pela Federal de Alfenas e faço Pós em Engenharia de Qualidade, além de ter feito o bootcamp da Generation Brasil. 
+Estagiei e trabalhei em áreas das engenharias de materiais e ambiental, mas o que eu amava estudar era programação. Vi na Generation a oportunidade de direcionar minha transição de carreira como desenvolvedora web em Java. 
+Sou resiliente, criativa e comunicativa, e no projeto pude desenvolver mais essas habilidades trabalhando em equipe.
+</h4>
             </Typography>
         </Box>
         <Box className="boxL">
