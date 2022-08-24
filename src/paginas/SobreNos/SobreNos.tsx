@@ -215,8 +215,10 @@ Sou resiliente, criativa e comunicativa, e no projeto pude desenvolver mais essa
     <Box className="boxL">
       <img className="daniel" src="https://imageshack.com/i/pnubCgFlj" alt="" />
       <Typography className="aparTextDan">
-        <h1>Oi, eu sou o Jair Siqueira</h1>
-        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi tortor, porttitor vitae lacus a, luctus porttitor magna. Curabitur at ante at turpis sollicitudin suscipit. Integer at nisi ut magna suscipit imperdiet. Donec vehicula rhoncus pellentesque. Sed faucibus auctor tellus, sit amet iaculis massa vulputate ac. Donec fermentum vitae diam non suscipit. Integer vulputate, nunc vel euismod eleifend, nisi libero pretium leo, et faucibus dui neque vitae quam.</h4>
+        <h1>Eu sou o Jair Siqueira</h1>
+        <h4>Mas pode me chamar de Junior, sou um amante da tecnologia, apaixonado por programação, games e pets.
+Acabei de me formar desenvolvedor junior,  e tenho conhecimentos em Java, Python, C#, e um crush por React.
+Para mais informações, peço para que vejam o meu Github e LinkedIn !!!</h4>
       </Typography>
       <Box className="danielTexto">
         <a
