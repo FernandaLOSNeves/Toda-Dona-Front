@@ -12,11 +12,11 @@ import ModalLogin from '../../produtos/modalLogin/ModalLogin';
 function Navbar() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
-      );
+    );
     let navigate = useNavigate();
     const dispatch = useDispatch();
-    
-    function goLogout(){
+
+    function goLogout() {
         dispatch(addToken(''));
         toast.info('Usuário deslogado', {
             position: "top-right",
@@ -28,12 +28,12 @@ function Navbar() {
             theme: "colored",
             progress: undefined,
         });
-       navigate('/')
+        navigate('/')
     }
-    
+
     var navbarComponent;
 
-    if(token !== ""){
+    if (token !== "") {
         navbarComponent = <AppBar position="static" color='secondary'>
             <Toolbar className="backnav" variant="dense">
                 <Box className='tdLogo'>
@@ -79,10 +79,10 @@ function Navbar() {
                             </Box>
                         </Link>
 
-                        <Link to='/contato' className='text-decorator-none'>
+                        <Link to='/faleconosco' className='text-decorator-none'>
                             <Box mx={1} className='corNav'>
                                 <Typography variant="h6" color="inherit">
-                                    • Contato
+                                    • Fale conosco
                                 </Typography>
                             </Box>
                         </Link>
@@ -95,69 +95,69 @@ function Navbar() {
                 </Box>
             </Toolbar>
         </AppBar>
-        
-    } else{
+
+    } else {
 
         navbarComponent = <AppBar position="static" color='secondary'>
-        <Toolbar className="backnav" variant="dense">
-            <Box className='tdLogo'>
-                <img className='tamImg' src="https://imageshack.com/i/poSUD0SMp"  alt="TodaDona Logo" />
-            </Box>
-            
-            <Box className='espaco'>
-                <Box display="flex" justifyContent="start" className='corNav'>
-                    <Link to='/' className='text-decorator-none'>
-                        <Box mx={1} className='corNav'>
-                            <Typography variant="h6" color="inherit">
-                                • Home
-                            </Typography>
-                        </Box>
-                    </Link>
-
-                    
-                    <Link to='/produtoscliente' className='text-decorator-none'>
-                        <Box mx={1} className='corNav'>
-                            <Typography variant="h6" color="inherit">
-                                • Produtos
-                            </Typography>
-                        </Box>
-                    </Link>
-                   
-
-                  
-                    <Link to='/sobrenos' className='text-decorator-none'>
-                        <Box mx={1} className='corNav'>
-                            <Typography variant="h6" color="inherit">
-                                • Sobre nós
-                            </Typography>
-                        </Box>
-                    </Link>
-
-                    <Link to='/faleconosco' className='text-decorator-none'>
-                        <Box mx={1} className='corNav'>
-                            <Typography variant="h6" color="inherit">
-                                • Fale conosco
-                            </Typography>
-                        </Box>
-                    </Link>
-
-                    
-                    <Box mx={1} className='container'>
-                       
-                        <ModalLogin/>
-                        
-                        
-                    </Box>
-                    
-
+            <Toolbar className="backnav" variant="dense">
+                <Box className='tdLogo'>
+                    <img className='tamImg' src="https://imageshack.com/i/poSUD0SMp" alt="TodaDona Logo" />
                 </Box>
-            </Box>
-        </Toolbar>
-    </AppBar>
+
+                <Box className='espaco'>
+                    <Box display="flex" justifyContent="start" className='corNav'>
+                        <Link to='/' className='text-decorator-none'>
+                            <Box mx={1} className='corNav'>
+                                <Typography variant="h6" color="inherit">
+                                    • Home
+                                </Typography>
+                            </Box>
+                        </Link>
+
+
+                        <Link to='/produtoscliente' className='text-decorator-none'>
+                            <Box mx={1} className='corNav'>
+                                <Typography variant="h6" color="inherit">
+                                    • Produtos
+                                </Typography>
+                            </Box>
+                        </Link>
+
+
+
+                        <Link to='/sobrenos' className='text-decorator-none'>
+                            <Box mx={1} className='corNav'>
+                                <Typography variant="h6" color="inherit">
+                                    • Sobre nós
+                                </Typography>
+                            </Box>
+                        </Link>
+
+                        <Link to='/faleconosco' className='text-decorator-none'>
+                            <Box mx={1} className='corNav'>
+                                <Typography variant="h6" color="inherit">
+                                    • Fale conosco
+                                </Typography>
+                            </Box>
+                        </Link>
+
+
+                        <Box mx={1} className='container'>
+
+                            <ModalLogin />
+
+
+                        </Box>
+
+
+                    </Box>
+                </Box>
+            </Toolbar>
+        </AppBar>
     }
     return (
         <>
-        {navbarComponent}
+            {navbarComponent}
         </>
     )
 }
