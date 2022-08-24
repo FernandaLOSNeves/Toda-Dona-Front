@@ -26,7 +26,7 @@
     display: flex;
     justify-content: center;
     background-color: #fff;
-    z-index: 1;
+    z-index: 2;
     align-items: flex-end!important;
     text-align:right;
     transition: 0.5s ease-in-out;
@@ -45,7 +45,6 @@
     height: 15rem!important;
     border-radius: 300px;
     rotate: -20deg;
-    overflow: hidden;
     margin: 3rem!important;
     margin-top: 5rem;
     display: flex;
@@ -64,9 +63,17 @@
     transform: translate(4rem, 4rem);
     transition: 0.5s;
     opacity: 1;
+    rotate: -10deg;
 }
 
-.daniel:hover ~ .aparTextDan{
+.danielTexto:hover {
+    transform: translate(4rem, 4rem);
+    transition: 0.5s;
+    z-index: 1;
+    opacity: 1;
+}
+
+.daniel:hover + .aparTextDan{
     color: #a30fa3!important;
     transform: translate(1rem, 1rem);
     transition: 0.5s;
@@ -75,12 +82,44 @@
     opacity: 1;
 }
 
+.danielTexto:hover .aparTextDan{
+    color: black!important;
+    transform: translate(1rem, 1rem);
+    transition: 0.5s;
+    margin-right: 2rem;
+    margin-bottom: 5rem;
+    opacity: 1!important;
+}
+
 .aparTextDan{
-    color: #1ba14e;
-    opacity: 0;
+    color: #a30f9e;
+    opacity: 0.1;
     width: 800px;
     transition: 0.5s;
     rotate: 3deg;
+}
+
+
+.danicon{
+    margin-top: -150px;
+    margin-left: 125px;
+    width: 30px!important;
+    position:absolute;
+    justify-content: flex-start!important;
+    align-items: flex-start!important;
+    z-index: 10;
+    scale: 1.5;
+}
+
+.dangiticon{
+    margin-top: -100px;
+    margin-left: 100px;
+    width: 30px!important;
+    position:absolute;
+    justify-content: flex-start!important;
+    align-items: flex-start!important;
+    z-index: 10;
+    scale: 1.5;
 }
 
 html {
@@ -122,11 +161,10 @@ html {
 
 .brunaTexto{
     position: relative;
-    top: 0;
+    top: 100;
     left: 0;
     width: 15rem!important;
     height: 15rem!important;
-    overflow: hidden;
     border-radius: 300px!important;
     margin: 3rem!important;
     margin-top: 5rem;
@@ -136,8 +174,7 @@ html {
     background-color: #a30fa3;
     color: white;
     z-index: 0;
-    align-items: flex-end!important;
-    text-align: center;
+    align-items: flex-end;
     transition: 0.5s ease-in-out;
     rotate: 10deg;
 }
@@ -155,6 +192,26 @@ h4{
 .bruna:hover + .brunaTexto {
     transform: translate(-4rem, 4rem);
     transition: 0.5s;
+}
+
+.brunaTexto:hover{
+    transform: translate(-4rem, 4rem);
+    transition: 0.5s;
+    rotate: 20deg;
+}
+
+.bruna:hover ~ .aparText{
+    color: #a30fa3!important;
+    transform: translate(1rem, 1rem);
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.brunaTexto:hover ~ .aparText{
+    color: #a30fa3!important;
+    transform: translate(1rem, 1rem);
+    transition: 0.5s;
+    opacity: 1;
 }
 
 .boxC{
@@ -175,8 +232,8 @@ h4{
 
 
 .aparText{
-    color: #1ba14e;
-    opacity: 0;
+    color: #a30f9e;
+    opacity: 0.1;
     width: 800px;
     transition: 0.5s;
     rotate: -5deg;
@@ -184,12 +241,7 @@ h4{
 
 
 
-.bruna:hover ~ .aparText{
-    color: #a30fa3!important;
-    transform: translate(1rem, 1rem);
-    transition: 0.5s;
-    opacity: 1;
-}
+
 
 .imgMulher {
     margin-top: 30px;
@@ -218,6 +270,29 @@ h4{
     width: 100%!important;
     align-items: center;
 }
+
+.brunaicon{
+    margin-top: -150px;
+    margin-left: -30px;
+    width: 30px!important;
+    position:absolute;
+    justify-content: flex-start!important;
+    align-items: flex-start!important;
+    z-index: 10;
+    scale: 1.5;
+}
+
+.brunagiticon{
+    margin-top: -100px;
+    margin-left: -25px;
+    width: 30px!important;
+    position:absolute;
+    justify-content: flex-start!important;
+    align-items: flex-start!important;
+    z-index: 10;
+    scale: 1.5;
+}
+
 
 .branco2 {
     color: white;
